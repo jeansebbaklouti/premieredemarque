@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010 Express for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "premieredemarque2", "premieredemarque2\premieredemarque2\premieredemarque2.csproj", "{39E02C50-741E-4CC1-A271-E1712154C1C6}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "premieredemarque2Content", "premieredemarque2\premieredemarque2Content\premieredemarque2Content.contentproj", "{0E23F562-99EB-4FC9-BDDC-424A25CA2736}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39E02C50-741E-4CC1-A271-E1712154C1C6}.Debug|x86.ActiveCfg = Debug|x86
+		{39E02C50-741E-4CC1-A271-E1712154C1C6}.Debug|x86.Build.0 = Debug|x86
+		{39E02C50-741E-4CC1-A271-E1712154C1C6}.Release|x86.ActiveCfg = Release|x86
+		{39E02C50-741E-4CC1-A271-E1712154C1C6}.Release|x86.Build.0 = Release|x86
+		{0E23F562-99EB-4FC9-BDDC-424A25CA2736}.Debug|x86.ActiveCfg = Debug|x86
+		{0E23F562-99EB-4FC9-BDDC-424A25CA2736}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
