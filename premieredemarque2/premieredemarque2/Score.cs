@@ -18,7 +18,9 @@ namespace premieredemarque2
 
         public Texture2D textureBonus100;
 
-        public Texture2D textureMalus;
+        public Texture2D textureMalus10;
+
+        public Texture2D textureMalus100;
 
 
 
@@ -79,7 +81,7 @@ namespace premieredemarque2
                     break;
                 case BonusType.takeObject:
                     typeBonus = 2;
-                    _value+= 100;
+                    _value+= 10;
             
                     break;
                 case BonusType.loseObject:
@@ -89,7 +91,7 @@ namespace premieredemarque2
                     break;
                 case BonusType.fall:
                     typeBonus = 4;
-                    _value-= 100;
+                    _value-= 10;
       
                     break; 
 
@@ -110,7 +112,8 @@ namespace premieredemarque2
         
             textureBonus10 = this._game.Content.Load<Texture2D>("bonus10");
             textureBonus100 = this._game.Content.Load<Texture2D>("bonus100");
-            textureMalus = this._game.Content.Load<Texture2D>("malus100");
+            textureMalus100 = this._game.Content.Load<Texture2D>("malus100");
+            textureMalus10 = this._game.Content.Load<Texture2D>("malus10");
   
 
         }
@@ -126,27 +129,34 @@ namespace premieredemarque2
         public void Draw(SpriteBatch spriteBatch)
         {
 
-            foreach(Bonus bonus in _currentBonus){
-               // spriteBatch.DrawString(police, bonus.texToDisplay, bonus.position, Color.Green);
-                if (bonus.type > 2)
+            foreach (Bonus bonus in _currentBonus)
+            {
+                // spriteBatch.DrawString(police, bonus.texToDisplay, bonus.position, Color.Green);
+                if (bonus.type == 4)
                 {
-                    spriteBatch.Draw(textureMalus, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                    spriteBatch.Draw(textureMalus10, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
                 }
-                else
                 {
-                    if (bonus.type == 1)
+                    if (bonus.type == 3)
                     {
-                        spriteBatch.Draw(textureBonus100, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                        spriteBatch.Draw(textureMalus100, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
                     }
                     else
                     {
-
-                        if (bonus.type == 2)
+                        if (bonus.type == 1)
                         {
-                            spriteBatch.Draw(textureBonus10, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                            spriteBatch.Draw(textureBonus100, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
                         }
-                    }
+                        else
+                        {
 
+                            if (bonus.type == 2)
+                            {
+                                spriteBatch.Draw(textureBonus10, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                            }
+                        }
+
+                    }
                 }
 
             }
