@@ -37,6 +37,12 @@ namespace premieredemarque2
 
         private static int PARTY_TIME = 90;
 
+
+        public int cptbonnesaff=0, cptmauvaiseaffaire=0;
+
+        private int lastObjectTaken ;
+
+
         public Gestion(Game1 jeu, int maxSoldes, Map playground, Hero joueur)
         {
             this._joueur = joueur;
@@ -52,6 +58,7 @@ namespace premieredemarque2
 
             _time = PARTY_TIME;
             _time = 41;
+            lastObjectTaken = _time;
 
         }
 
@@ -95,6 +102,28 @@ namespace premieredemarque2
             }
             _score.Update(gameTime);
         }
+
+        public void updateAfterPlayer()
+        {
+
+            if(_joueur.tuer){
+                _score.addBonus( Score.BonusType.kill, _joueur._position);
+            }
+            if (_joueur.toucher)
+            {
+                _score.addBonus(Score.BonusType.fall, _joueur._position);
+            }
+
+            if (lastObjectTaken - _time   >= 5)
+            {
+                _joueur.stress++;
+                //ugly hack
+                lastObjectTaken = _time;
+            }
+        }
+
+
+
 
         public Boolean endLevel()
         {
@@ -197,6 +226,8 @@ namespace premieredemarque2
                 else
                 {
                     takeSolde(vetementTemp);
+                     lastObjectTaken =  _time;
+                    
                 }
 
             }
@@ -212,10 +243,22 @@ namespace premieredemarque2
         public void takeSolde(Vetement vetement)
         {
             _joueur.nbVetementBought += vetement.prix ? 1 : -1;
+            if (vetement.prix == true)
+            {
+                cptbonnesaff++;
+            }
+            else if (vetement.prix == false)
+            {
+                cptmauvaiseaffaire++;
+            }
+            if (_joueur.isFury == false && _joueur.nbVetementBought < 0)
+            {
+                _joueur.nbVetementBought = 0;
+            }
             _currentVetements.Remove(vetement);
             _boughtVetements.Add(vetement);
 
-            _score.addBonus(vetement.prix ? Score.BonusType.takeObject : Score.BonusType.takeObject, _joueur._position);
+            _score.addBonus(vetement.prix ? Score.BonusType.takeObject : Score.BonusType.loseObject, _joueur._position);
 
         }
 

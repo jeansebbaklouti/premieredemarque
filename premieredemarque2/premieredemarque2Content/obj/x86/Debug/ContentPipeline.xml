@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sprite.xnb</Output>
-      <Time>2013-03-24T12:50:01.5625+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous10.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous10.xnb</Output>
-      <Time>2013-03-24T12:50:01.421875+01:00</Time>
+      <Time>2013-03-24T16:06:44.234375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous100.png</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous100.xnb</Output>
-      <Time>2013-03-24T12:50:01.453125+01:00</Time>
+      <Time>2013-03-24T16:06:44.28125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous20.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous20.xnb</Output>
-      <Time>2013-03-24T12:50:01.421875+01:00</Time>
+      <Time>2013-03-24T16:06:44.25+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous30.png</Source>
@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous30.xnb</Output>
-      <Time>2013-03-24T12:50:01.421875+01:00</Time>
+      <Time>2013-03-24T16:06:44.25+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous40.png</Source>
@@ -332,7 +332,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous40.xnb</Output>
-      <Time>2013-03-24T12:50:01.4375+01:00</Time>
+      <Time>2013-03-24T16:06:44.25+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous50.png</Source>
@@ -341,7 +341,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous50.xnb</Output>
-      <Time>2013-03-24T12:50:01.4375+01:00</Time>
+      <Time>2013-03-24T16:06:44.265625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous60.png</Source>
@@ -350,7 +350,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous60.xnb</Output>
-      <Time>2013-03-24T12:50:01.4375+01:00</Time>
+      <Time>2013-03-24T16:06:44.265625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous70.png</Source>
@@ -359,7 +359,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous70.xnb</Output>
-      <Time>2013-03-24T12:50:01.453125+01:00</Time>
+      <Time>2013-03-24T16:06:44.265625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous80.png</Source>
@@ -368,7 +368,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous80.xnb</Output>
-      <Time>2013-03-24T12:50:01.453125+01:00</Time>
+      <Time>2013-03-24T16:06:44.265625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous90.png</Source>
@@ -377,7 +377,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous90.xnb</Output>
-      <Time>2013-03-24T12:50:01.453125+01:00</Time>
+      <Time>2013-03-24T16:06:44.28125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress10.png</Source>
@@ -386,7 +386,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress10.xnb</Output>
-      <Time>2013-03-24T12:50:01.46875+01:00</Time>
+      <Time>2013-03-24T16:06:44.28125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress100.png</Source>
@@ -395,7 +395,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress100.xnb</Output>
-      <Time>2013-03-24T12:50:01.5+01:00</Time>
+      <Time>2013-03-24T16:06:44.328125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress20.png</Source>
@@ -404,7 +404,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress20.xnb</Output>
-      <Time>2013-03-24T12:50:01.46875+01:00</Time>
+      <Time>2013-03-24T16:06:44.28125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress30.png</Source>
@@ -413,7 +413,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress30.xnb</Output>
-      <Time>2013-03-24T12:50:01.46875+01:00</Time>
+      <Time>2013-03-24T16:06:44.296875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress40.png</Source>
@@ -422,7 +422,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress40.xnb</Output>
-      <Time>2013-03-24T12:50:01.484375+01:00</Time>
+      <Time>2013-03-24T16:06:44.296875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress50.png</Source>
@@ -431,7 +431,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress50.xnb</Output>
-      <Time>2013-03-24T12:50:01.484375+01:00</Time>
+      <Time>2013-03-24T16:06:44.296875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress60.png</Source>
@@ -440,7 +440,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress60.xnb</Output>
-      <Time>2013-03-24T12:50:01.484375+01:00</Time>
+      <Time>2013-03-24T16:06:44.3125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress70.png</Source>
@@ -449,7 +449,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress70.xnb</Output>
-      <Time>2013-03-24T12:50:01.5+01:00</Time>
+      <Time>2013-03-24T16:06:44.3125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress80.png</Source>
@@ -458,7 +458,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress80.xnb</Output>
-      <Time>2013-03-24T12:50:01.5+01:00</Time>
+      <Time>2013-03-24T16:06:44.3125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress90.png</Source>
@@ -467,7 +467,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress90.xnb</Output>
-      <Time>2013-03-24T12:50:01.5+01:00</Time>
+      <Time>2013-03-24T16:06:44.3125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps.png</Source>
@@ -476,7 +476,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps10.png</Source>
@@ -485,7 +485,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps10.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.328125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps100.png</Source>
@@ -494,7 +494,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps100.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps20.png</Source>
@@ -503,7 +503,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps20.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.328125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps30.png</Source>
@@ -512,7 +512,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps30.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.328125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps40.png</Source>
@@ -521,7 +521,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps40.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps50.png</Source>
@@ -530,7 +530,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps50.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps60.png</Source>
@@ -539,7 +539,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps60.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps70.png</Source>
@@ -548,7 +548,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps70.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps80.png</Source>
@@ -557,7 +557,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps80.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps90.png</Source>
@@ -566,7 +566,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps90.xnb</Output>
-      <Time>2013-03-24T12:50:01.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge0.png</Source>
@@ -575,7 +575,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge0.xnb</Output>
-      <Time>2013-03-24T12:50:01.421875+01:00</Time>
+      <Time>2013-03-24T16:06:44.234375+01:00</Time>
     </Item>
     <Item>
       <Source>damier.png</Source>
@@ -584,7 +584,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\damier.xnb</Output>
-      <Time>2013-03-24T12:49:59.484375+01:00</Time>
+      <Time>2013-03-24T16:06:42.921875+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle1.png</Source>
@@ -593,7 +593,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle1.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle2.png</Source>
@@ -602,7 +602,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle2.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle3.png</Source>
@@ -611,7 +611,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle3.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle4.png</Source>
@@ -620,7 +620,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle4.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle5.png</Source>
@@ -629,7 +629,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle5.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>menu.png</Source>
@@ -638,7 +638,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\menu.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-down1.png</Source>
@@ -647,7 +647,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down1.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.984375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-down2.png</Source>
@@ -656,7 +656,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down2.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.984375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-left1.png</Source>
@@ -665,7 +665,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left1.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.984375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-left2.png</Source>
@@ -674,7 +674,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left2.xnb</Output>
-      <Time>2013-03-24T12:49:59.515625+01:00</Time>
+      <Time>2013-03-24T16:06:42.984375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-right1.png</Source>
@@ -683,7 +683,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right1.xnb</Output>
-      <Time>2013-03-24T12:49:59.515625+01:00</Time>
+      <Time>2013-03-24T16:06:44.21875+01:00</Time>
     </Item>
     <Item>
       <Source>heros-right2.png</Source>
@@ -692,7 +692,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right2.xnb</Output>
-      <Time>2013-03-24T12:50:00.0625+01:00</Time>
+      <Time>2013-03-24T16:06:44.21875+01:00</Time>
     </Item>
     <Item>
       <Source>heros-up1.png</Source>
@@ -701,7 +701,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up1.xnb</Output>
-      <Time>2013-03-24T12:50:01.40625+01:00</Time>
+      <Time>2013-03-24T16:06:44.234375+01:00</Time>
     </Item>
     <Item>
       <Source>heros-up2.png</Source>
@@ -710,7 +710,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up2.xnb</Output>
-      <Time>2013-03-24T12:50:01.40625+01:00</Time>
+      <Time>2013-03-24T16:06:44.234375+01:00</Time>
     </Item>
     <Item>
       <Source>robe.jpg</Source>
@@ -728,7 +728,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ecrase.xnb</Output>
-      <Time>2013-03-24T12:49:59.484375+01:00</Time>
+      <Time>2013-03-24T16:06:42.921875+01:00</Time>
     </Item>
     <Item>
       <Source>promo-ko.png</Source>
@@ -737,7 +737,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo-ko.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>promo-ok.png</Source>
@@ -746,7 +746,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo-ok.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>sang-bas.png</Source>
@@ -755,7 +755,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-bas.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>sang-droite.png</Source>
@@ -764,7 +764,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-droite.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>sang-gauche.png</Source>
@@ -773,7 +773,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-gauche.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>sang-haut.png</Source>
@@ -782,7 +782,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-haut.xnb</Output>
-      <Time>2013-03-24T12:50:01.5625+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>promo1.png</Source>
@@ -791,7 +791,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo1.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>promo2.png</Source>
@@ -800,7 +800,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo2.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>promo3.png</Source>
@@ -809,7 +809,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo3.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>promo4.png</Source>
@@ -818,7 +818,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo4.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>promo5.png</Source>
@@ -827,7 +827,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo5.xnb</Output>
-      <Time>2013-03-24T12:50:01.546875+01:00</Time>
+      <Time>2013-03-24T16:06:44.359375+01:00</Time>
     </Item>
     <Item>
       <Source>concurrentes.png</Source>
@@ -836,7 +836,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\concurrentes.xnb</Output>
-      <Time>2013-03-24T12:49:59.484375+01:00</Time>
+      <Time>2013-03-24T16:06:42.921875+01:00</Time>
     </Item>
     <Item>
       <Source>game-over.jpg</Source>
@@ -845,7 +845,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game-over.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.96875+01:00</Time>
     </Item>
     <Item>
       <Source>splash.png</Source>
@@ -854,7 +854,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\splash.xnb</Output>
-      <Time>2013-03-24T12:50:01.5625+01:00</Time>
+      <Time>2013-03-24T16:06:44.375+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-bas1.png</Source>
@@ -863,7 +863,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-bas1.xnb</Output>
-      <Time>2013-03-24T12:49:59.484375+01:00</Time>
+      <Time>2013-03-24T16:06:42.9375+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-bas2.png</Source>
@@ -872,7 +872,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-bas2.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.9375+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-droite1.png</Source>
@@ -881,7 +881,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-droite1.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.9375+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-droite2.png</Source>
@@ -890,7 +890,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-droite2.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.953125+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-gauche1.png</Source>
@@ -899,7 +899,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-gauche1.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.953125+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-gauche2.png</Source>
@@ -908,7 +908,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-gauche2.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.953125+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-haut1.png</Source>
@@ -917,7 +917,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-haut1.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.953125+01:00</Time>
     </Item>
     <Item>
       <Source>fumee-haut2.png</Source>
@@ -926,7 +926,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\fumee-haut2.xnb</Output>
-      <Time>2013-03-24T12:49:59.5+01:00</Time>
+      <Time>2013-03-24T16:06:42.96875+01:00</Time>
     </Item>
     <Item>
       <Source>bonus-fin.png</Source>
@@ -935,7 +935,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus-fin.xnb</Output>
-      <Time>2013-03-24T12:49:59.484375+01:00</Time>
+      <Time>2013-03-24T16:06:42.921875+01:00</Time>
     </Item>
     <Item>
       <Source>bonus10.png</Source>
@@ -944,7 +944,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus10.xnb</Output>
-      <Time>2013-03-24T12:49:58.25+01:00</Time>
+      <Time>2013-03-24T16:06:42.90625+01:00</Time>
     </Item>
     <Item>
       <Source>bonus100.png</Source>
@@ -953,7 +953,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus100.xnb</Output>
-      <Time>2013-03-24T12:49:58.265625+01:00</Time>
+      <Time>2013-03-24T16:06:42.90625+01:00</Time>
     </Item>
     <Item>
       <Source>malus100.png</Source>
@@ -962,7 +962,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\malus100.xnb</Output>
-      <Time>2013-03-24T12:50:01.53125+01:00</Time>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
     </Item>
     <Item>
       <Source>theme.mp3</Source>
@@ -983,6 +983,33 @@
       <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.xnb</Output>
       <Extra>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.wma</Extra>
       <Time>2013-03-24T13:23:34.25+01:00</Time>
+    </Item>
+    <Item>
+      <Source>malus10.png</Source>
+      <Name>malus10</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\malus10.xnb</Output>
+      <Time>2013-03-24T16:06:44.34375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFontTotal.spritefont</Source>
+      <Name>SpriteFontTotal</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\SpriteFontTotal.xnb</Output>
+      <Time>2013-03-24T16:06:18.078125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game-overb.jpg</Source>
+      <Name>game-overb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game-overb.xnb</Output>
+      <Time>2013-03-24T16:06:42.96875+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bonus.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Gauje.cs" />
     <Compile Include="Gestion.cs" />

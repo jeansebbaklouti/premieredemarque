@@ -20,9 +20,11 @@ namespace premieredemarque2
         public int GameState = 0;
 
         GraphicsDeviceManager graphics;
+
         SpriteBatch spriteBatch;
         private Texture2D SpriteMenu;
         SpriteFont police;
+        SpriteFont policeTotal;
         Hero joueur;
         private Texture2D SpriteSplash;
         private Texture2D SpriteGameOver;
@@ -35,7 +37,8 @@ namespace premieredemarque2
 
         List<Rectangle> murs;
 
-        int cptbonneaff, cptmauvaff, cptecrase, cpttuer;
+        int cptbonneaff, cptmauvaff, cptecrase, cpttuer,   finalScore;
+
 
         static Random rnd;
 
@@ -59,12 +62,16 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            graphics.IsFullScreen = false;
+
+            graphics.IsFullScreen = true;
 
             cptbonneaff=0;
             cptmauvaff =0;
             cptecrase = 0;
             cpttuer = 0;
+
+            finalScore += 0;
+
         }
 
         /// <summary>
@@ -111,6 +118,9 @@ namespace premieredemarque2
         protected override void LoadContent()
         {
             police = Content.Load<SpriteFont>("SpriteFont1");
+            policeTotal = Content.Load<SpriteFont>("SpriteFontTotal");
+
+            
             // Créer un SpriteBatch, qui peut être utilisé pour dessiner des textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             _gestion.loadSoldes(0);
@@ -203,13 +213,16 @@ namespace premieredemarque2
                 }
                 else if (_gestion.getStatus() == 1)
                 {
-                    currentLevel = (currentLevel + 1) % map._levels.Count;
+                    currentLevel = (currentLevel + 1) % map._levels.Count + 1;
                     startTime = (int)gameTime.TotalGameTime.TotalSeconds;
                     _gestion.isFury = false;
                     cptbonneaff += _gestion.cptbonnesaff;
                     cptmauvaff += _gestion.cptmauvaiseaffaire;
                     cptecrase += joueur.cptpietiner;
                     cpttuer += joueur.cpttuer;
+
+                    finalScore+= _gestion.getScore();
+
                     Initialize();
                     LoadContent();
                 }
@@ -223,6 +236,9 @@ namespace premieredemarque2
                     cptmauvaff += _gestion.cptmauvaiseaffaire;
                     cptecrase += joueur.cptpietiner;
                     cpttuer += joueur.cpttuer;
+
+                    finalScore += _gestion.getScore();
+
                     Initialize();
                     LoadContent();
                 }
@@ -248,12 +264,14 @@ namespace premieredemarque2
             {
                 // Game Over
                 spriteBatch.Draw(SpriteGameOver, new Rectangle(0, 0, 1280, 800), Color.White);
-                spriteBatch.DrawString(police, cptbonneaff.ToString(), new Vector2(1200,667), new Color(74, 84, 80));
-                spriteBatch.DrawString(police, cptmauvaff.ToString(), new Vector2(1200, 6783), new Color(74, 84, 80));
-                spriteBatch.DrawString(police, cpttuer.ToString(), new Vector2(1200, 715), new Color(74, 84, 80));
-                spriteBatch.DrawString(police, cptecrase.ToString(), new Vector2(1200, 728), new Color(74, 84, 80));
-                Score = (_gestion.cptbonnesaff * 100) - (_gestion.cptmauvaiseaffaire * 100) + (joueur.cpttuer * 10) - (joueur.cptpietiner * 100);
-                spriteBatch.DrawString(police, Score.ToString(), new Vector2(1200, 745), new Color(74, 84, 80));
+
+                spriteBatch.DrawString(policeTotal, cptbonneaff.ToString(), new Vector2(1200, 670), new Color(74, 84, 80));
+                spriteBatch.DrawString(policeTotal, cptmauvaff.ToString(), new Vector2(1200, 685), new Color(74, 84, 80));
+                spriteBatch.DrawString(policeTotal, cpttuer.ToString(), new Vector2(1200, 708), new Color(74, 84, 80));
+                spriteBatch.DrawString(policeTotal, cptecrase.ToString(), new Vector2(1200, 728), new Color(74, 84, 80));
+               // Score = (_gestion.cptbonnesaff * 100) - (_gestion.cptmauvaiseaffaire * 100) + (joueur.cpttuer * 10) - (joueur.cptpietiner * 100);
+                spriteBatch.DrawString(policeTotal, finalScore.ToString(), new Vector2(1200, 745), new Color(74, 84, 80));
+
 
             }
             else

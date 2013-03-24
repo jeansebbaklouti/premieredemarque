@@ -303,3 +303,7 @@ C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premiere
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.wma
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.mp3
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game_over.wav
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\malus10.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\SpriteFontTotal.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\SpriteFontTotal.spritefont
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game-overb.xnb

@@ -109,6 +109,9 @@ Content\theme.xnb
 Content\theme.wma
 Content\music_intro.xnb
 Content\music_intro.wma
+Content\malus10.xnb
+Content\SpriteFontTotal.xnb
+Content\game-overb.xnb
 Content\cart_1.wav
 Content\cart_2.wav
 Content\cart_3.wav
@@ -214,3 +217,4 @@ Content\smash_dirty.wav
 Content\taking_cash.wav
 Content\music_intro.mp3
 Content\game_over.wav
+Content\SpriteFontTotal.spritefont

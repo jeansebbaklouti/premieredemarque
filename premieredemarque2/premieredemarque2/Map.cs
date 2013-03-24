@@ -111,7 +111,7 @@ namespace premieredemarque2
             this._levels = new List<Level>();
             _levels.Add(new Level(map0, new int[] {1, 9}, new int[] {4, 15}));
             _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {4, 15}));
-            _levels.Add(new Level(map2, new int[] {1, 15}, new int[] {4, 15}));
+            _levels.Add(new Level(map2, new int[] {1, 10}, new int[] {4, 15}));
             _levels.Add(new Level(map3, new int[] {1, 15}, new int[] {4, 15}));
 
             this.setLevel(level);
