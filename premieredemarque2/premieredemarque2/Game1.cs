@@ -35,6 +35,8 @@ namespace premieredemarque2
 
         List<Rectangle> murs;
 
+        int cptbonneaff, cptmauvaff, cptecrase, cpttuer;
+
         static Random rnd;
 
         Map map;
@@ -58,6 +60,11 @@ namespace premieredemarque2
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
             graphics.IsFullScreen = true;
+
+            cptbonneaff=0;
+            cptmauvaff =0;
+            cptecrase = 0;
+            cpttuer = 0;
         }
 
         /// <summary>
@@ -208,6 +215,10 @@ namespace premieredemarque2
                     currentLevel++;
                     startTime = (int)gameTime.TotalGameTime.TotalSeconds;
                     _gestion.isFury = false;
+                    cptbonneaff += _gestion.cptbonnesaff;
+                    cptmauvaff += _gestion.cptmauvaiseaffaire;
+                    cptecrase += joueur.cptpietiner;
+                    cpttuer += joueur.cpttuer;
                     Initialize();
                     LoadContent();
                 }
@@ -217,6 +228,10 @@ namespace premieredemarque2
                     GameState = -1;
                     currentLevel = 1;
                     sons.stopTheme();
+                    cptbonneaff += _gestion.cptbonnesaff;
+                    cptmauvaff += _gestion.cptmauvaiseaffaire;
+                    cptecrase += joueur.cptpietiner;
+                    cpttuer += joueur.cpttuer;
                     Initialize();
                     LoadContent();
                 }
@@ -229,6 +244,7 @@ namespace premieredemarque2
         /// <param name="gameTime">Fournit un aperçu des valeurs de temps.</param>
         protected override void Draw(GameTime gameTime)
         {
+            int Score;
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
@@ -241,6 +257,13 @@ namespace premieredemarque2
             {
                 // Game Over
                 spriteBatch.Draw(SpriteGameOver, new Rectangle(0, 0, 1280, 800), Color.White);
+                spriteBatch.DrawString(police, cptbonneaff.ToString(), new Vector2(1200,667), new Color(74, 84, 80));
+                spriteBatch.DrawString(police, cptmauvaff.ToString(), new Vector2(1200, 6783), new Color(74, 84, 80));
+                spriteBatch.DrawString(police, cpttuer.ToString(), new Vector2(1200, 715), new Color(74, 84, 80));
+                spriteBatch.DrawString(police, cptecrase.ToString(), new Vector2(1200, 728), new Color(74, 84, 80));
+                Score = (_gestion.cptbonnesaff * 100) - (_gestion.cptmauvaiseaffaire * 100) + (joueur.cpttuer * 10) - (joueur.cptpietiner * 100);
+                spriteBatch.DrawString(police, Score.ToString(), new Vector2(1200, 745), new Color(74, 84, 80));
+
             }
             else
             {
@@ -301,10 +324,11 @@ namespace premieredemarque2
                         }
                         joueur.afficher(spriteBatch);
                     }
+                    spriteBatch.DrawString(police, joueur.nbVetementBought.ToString(), new Vector2(750, 10), Color.Black);
                 }
             }
 
-            spriteBatch.DrawString(police, _gestion._time.ToString(), new Vector2(10,10), Color.Black);
+            
 
             spriteBatch.End();
 

@@ -37,6 +37,8 @@ namespace premieredemarque2
 
         private static int PARTY_TIME = 90;
 
+        public int cptbonnesaff=0, cptmauvaiseaffaire=0;
+
         public Gestion(Game1 jeu, int maxSoldes, Map playground, Hero joueur)
         {
             this._joueur = joueur;
@@ -212,6 +214,18 @@ namespace premieredemarque2
         public void takeSolde(Vetement vetement)
         {
             _joueur.nbVetementBought += vetement.prix ? 1 : -1;
+            if (vetement.prix == true)
+            {
+                cptbonnesaff++;
+            }
+            else if (vetement.prix == false)
+            {
+                cptmauvaiseaffaire++;
+            }
+            if (_joueur.isFury == false && _joueur.nbVetementBought < 0)
+            {
+                _joueur.nbVetementBought = 0;
+            }
             _currentVetements.Remove(vetement);
             _boughtVetements.Add(vetement);
 
