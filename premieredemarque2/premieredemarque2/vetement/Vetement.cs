@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using Microsoft.Xna.Framework;
 
 using Microsoft.Xna.Framework.Graphics;
@@ -8,11 +9,12 @@ using Microsoft.Xna.Framework.Graphics;
 namespace premieredemarque2.vetement
 {
 
-   
+
     class Vetement
     {
 
         public Texture2D textureV;
+        public Texture2D textureP;
         public Vector2 Position;
         public Rectangle hitbox;
         private Boolean _prix;
@@ -23,32 +25,35 @@ namespace premieredemarque2.vetement
         public Game1 _jeu;
         public Boolean active;
 
+        private int _type;
+        private static Random rnd = new Random();
+
         public Circle priceArea;
         public Boolean _displayPriceArea;
-        private static Random rnd = new Random();
-        private int _type;
 
         public Vetement(Game1 jeu, float prix, int time, int createTime)
         {
             this._jeu = jeu;
             // Set the player to be active
-            this._prix = prix % 2 ==0;
+            this._prix = prix % 2 == 0;
             // Set the player health
             this.time = time;
             _createTime = createTime;
             active = false;
             _displayPriceArea = false;
 
-           
+
 
             police = _jeu.Content.Load<SpriteFont>("SpriteFont1");
         }
 
         public void Initialize(Vector2 position)
         {
-
             _type = rnd.Next(1, 5);
             textureV = this._jeu.Content.Load<Texture2D>("promo" + _type);
+            String ok = this.prix ? "-ok" : "-ko";
+            textureP = this._jeu.Content.Load<Texture2D>("promo" + ok);
+
             // Set the starting position of the player around the middle of the screen and to the back
             Position = position;
             hitbox = new Rectangle((int)Position.X, (int)Position.Y, 50, 50);
@@ -74,28 +79,29 @@ namespace premieredemarque2.vetement
             if (active == true)
             {
                 spriteBatch.Draw(textureV, Position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
-                 String isGood = "-";
-                 Color color = Color.Red;
-                if(this.prix){
-                    isGood = "+";
-                    color = Color.Green;
-                }
                 if (this._displayPriceArea)
                 {
-                spriteBatch.DrawString(this.police, isGood, Position, color);
+                    spriteBatch.Draw(textureP, Position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+
                 }
 
             }
         }
-        public void displayPriceArea(Rectangle player){
-             if(active &&  this.priceArea.Intersects(player)){
-                 this._displayPriceArea = true;
-             }
-        }
-        public Boolean instersect(Rectangle player)
+        public void displayPriceArea(Rectangle player)
         {
-            this.displayPriceArea(player);
+            if (active && this.priceArea.Intersects(player))
+            {
+                this._displayPriceArea = true;
+            }
+        }
+        public Boolean instersect(Rectangle player, Boolean isEnemy)
+        {
+            if (!isEnemy)
+            {
+                this.displayPriceArea(player);
+            }
             return active && player.Intersects(this.hitbox);
+
         }
 
         public int Width

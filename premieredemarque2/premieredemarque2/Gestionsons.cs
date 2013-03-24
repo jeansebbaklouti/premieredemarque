@@ -14,6 +14,7 @@ namespace premieredemarque2
         public Game1 jeu;
         public List<SoundEffect> Lpas;
         public List<SoundEffect> Lcri;
+        public List<SoundEffect> Ltoucher;
         public Song ambiance, theme;
         public List<SoundEffect> Lroule;
         public Random rand;
@@ -26,6 +27,7 @@ namespace premieredemarque2
             Lpas = new List<SoundEffect>();
             Lroule = new List<SoundEffect>();
             Lcri = new List<SoundEffect>();
+            Ltoucher = new List<SoundEffect>();
             rand = new Random();
             indicerand = 6;
             indicerand2 = 4;
@@ -51,21 +53,25 @@ namespace premieredemarque2
             Lcri.Add(jeu.Content.Load<SoundEffect>("scream_02"));
             Lcri.Add(jeu.Content.Load<SoundEffect>("scream_03"));
 
+            Ltoucher.Add(jeu.Content.Load<SoundEffect>("punch_1"));
+            Ltoucher.Add(jeu.Content.Load<SoundEffect>("punch_2"));
+            Ltoucher.Add(jeu.Content.Load<SoundEffect>("punch_3"));
+
             ambiance = jeu.Content.Load<Song>("ambient_shop");
             theme = jeu.Content.Load<Song>("theme");
         }
 
-        public void Maj(Boolean marche, Boolean taper, Boolean tuer)
+        public void Maj(Boolean marche, Boolean taper, Boolean tuer, Boolean toucher)
         {
             if (MediaPlayer.State == MediaState.Stopped)
             {
                 MediaPlayer.Volume = 2.0f;
-                MediaPlayer.Play(ambiance);
+                //MediaPlayer.Play(ambiance);
                 MediaPlayer.Play(theme);
             }
 
 
-            int tmp, tmp2, tmp3;
+            int tmp, tmp2;
             if (marche == true)
             {
                 tmp = (int)espacesoundpas;
@@ -86,6 +92,11 @@ namespace premieredemarque2
             if (tuer == true)
             {
                 choicri();
+            }
+
+            if (toucher == true)
+            {
+                touchsound();
             }
 
         }
@@ -122,6 +133,17 @@ namespace premieredemarque2
             } while (tmp == indicerand);
 
             Lcri[indicerand].Play();
+        }
+
+        public void touchsound()
+        {
+            int tmp = indicerand;
+            do
+            {
+                indicerand = rand.Next(Ltoucher.Count);
+            } while (tmp == indicerand);
+
+            Ltoucher[indicerand].Play();
         }
     }
 }

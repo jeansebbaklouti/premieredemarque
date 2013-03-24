@@ -20,7 +20,7 @@ namespace premieredemarque2
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Texture2D SpriteMenu;
-
+        SpriteFont police;
         Hero joueur;
 
         private Gestion _gestion;
@@ -31,9 +31,11 @@ namespace premieredemarque2
 
         List<Rectangle> murs;
 
-        Random rnd;
+        static Random rnd;
 
         Map map;
+
+        Texture2D SpriteOthers;
 
         int currentLevel = 1;
 
@@ -43,7 +45,7 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            Content.RootDirectory = "Content";
+            graphics.IsFullScreen = true;
         }
 
         /// <summary>
@@ -54,14 +56,15 @@ namespace premieredemarque2
         /// </summary>
         protected override void Initialize()
         {
-             rnd = new Random();
-             murs = new List<Rectangle>();
-             sons = new Gestionsons(this);
-             SpriteMenu = Content.Load<Texture2D>("menu");
+            rnd = new Random();
+            murs = new List<Rectangle>();
+            sons = new Gestionsons(this);
+            SpriteMenu = Content.Load<Texture2D>("menu");
             // TODO : ajouter la logique d’initialisation ici
-            joueur = new Hero(this, new Vector2(400, 400));
 
             map = new Map(graphics, currentLevel, murs);
+            // joueur = new Hero(this, new Vector2(400, 400));
+            joueur = new Hero(this, map.getStart());
             _gestion = new Gestion(this, 4, map, joueur);
             _gestion.charger();
             Ennemis = new List<Perso>();
@@ -74,29 +77,24 @@ namespace premieredemarque2
             Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
             Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
             Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
+
             Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
             Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-            Ennemis.Add(new Perso(this, findEmptyCase(rnd)));
-           
+
+
             base.Initialize();
-           
+
 
         }
 
-        
+
         /// <summary>
         /// LoadContent est appelé une fois par partie. Emplacement de chargement
         /// de tout votre contenu.
         /// </summary>
         protected override void LoadContent()
         {
-
+            police = Content.Load<SpriteFont>("SpriteFont1");
             // Créer un SpriteBatch, qui peut être utilisé pour dessiner des textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             _gestion.loadSoldes(0);
@@ -104,18 +102,18 @@ namespace premieredemarque2
             sons.charger();
             joueur.charger();
             murs = map.charger();
+            SpriteOthers = Content.Load<Texture2D>("concurrentes");
 
-          
 
             foreach (Perso p in Ennemis)
             {
                 p.Charger();
             }
-           
+
             // TODO : utiliser this.Content pour charger le contenu de jeu ici
         }
 
-       
+
 
         /// <summary>
         /// UnloadContent est appelé une fois par partie. Emplacement de déchargement
@@ -141,18 +139,21 @@ namespace premieredemarque2
                     this.Exit();
 
                 _gestion.instersectVetement(joueur.hitbox, false);
-              
+                _gestion.Update(gameTime);
+
 
                 foreach (Perso p in Ennemis)
                 {
                     _gestion.instersectVetement(p.hitbox, true);
-                    p.Maj(gameTime, murs);
+                    p.Maj(gameTime, murs, _gestion.isFury);
                 }
-                _gestion.Update(gameTime);
+
 
                 // TODO: Add your update logic here
+                joueur.isFury = _gestion.isFury;
                 joueur.Maj(gameTime, Ennemis, murs);
 
+                sons.Maj(joueur.marche, joueur.taper, joueur.tuer, joueur.toucher);
                 base.Update(gameTime);
             }
             else
@@ -184,14 +185,15 @@ namespace premieredemarque2
 
                 _gestion.Draw(spriteBatch);
 
+
                 foreach (Perso p in Ennemis)
                 {
-                    p.afficher(spriteBatch);
+                    p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
                 }
 
                 joueur.afficher(spriteBatch);
 
-
+                spriteBatch.DrawString(police, _gestion._time.ToString(), Vector2.Zero, Color.White);
 
                 spriteBatch.End();
 
@@ -201,14 +203,14 @@ namespace premieredemarque2
 
         private Vector2 findEmptyCase(Random rnd)
         {
-            int poxX = rnd.Next(1, map.getLengthX() -1);
-            int poxY = rnd.Next(1, map.getLengthY() -1 );
+            int poxX = rnd.Next(1, 23);
+            int poxY = rnd.Next(1, 16);
             while (map.isEmpty(poxX, poxY))
             {
-                poxX = rnd.Next(1, map.getLengthX() -1);
-                poxY = rnd.Next(1, map.getLengthY() -1);
+                poxX = rnd.Next(1, 22);
+                poxY = rnd.Next(1, 15);
             }
-            return new Vector2((poxX * 50) -10 , poxY * 50 );
+            return new Vector2(poxX * 50f - 10, poxY * 50f);
         }
 
     }

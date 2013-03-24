@@ -13,7 +13,7 @@ namespace premieredemarque2
     {
         private int _maxSoldes;
 
-        private int _nbVetementBought =0;
+        private int _nbVetementBought = 0;
         private List<Vetement> _currentVetements;
 
         private List<Vetement> _boughtVetements;
@@ -26,7 +26,7 @@ namespace premieredemarque2
 
         private Map _playground;
 
-        private int _time;
+        public int _time;
 
         private int _money;
 
@@ -37,6 +37,8 @@ namespace premieredemarque2
         private Hero _joueur;
 
         private int _status = 0;
+
+        public Boolean isFury = false;
 
         public Gestion(Game1 jeu, int maxSoldes, Map playground, Hero joueur)
         {
@@ -49,44 +51,47 @@ namespace premieredemarque2
             _currentVetements = new List<Vetement>();
             _boughtVetements = new List<Vetement>();
             _failBoughtVetements = new List<Vetement>();
-            timegauje = new Gauje(jeu, "temps", new Vector2(50, 50));
-
-            moneygauje = new Gauje(jeu, "sous", new Vector2(500, 50));
+            timegauje = new Gauje(jeu, "temps", new Vector2(160, 25));
 
             _money = 10;
-            _time = 90;
-            
+            _time = 40;
+
         }
 
-        public void  charger(){
-
-            timegauje.Initialize();
-            moneygauje.Initialize();
-        }
-
-        public void Update( GameTime gameTime)
+        public void charger()
         {
-           
+            timegauje.Initialize();
+        }
+
+        public void Update(GameTime gameTime)
+        {
+
             if (soldeTimeIsterminated())
             {
                 _failBoughtVetements.AddRange(_currentVetements);
-                _currentVetements.RemoveRange(0, _currentVetements.Count );
+                _currentVetements.RemoveRange(0, _currentVetements.Count);
 
             }
             if (_currentVetements.Count == 0)
             {
                 loadSoldes(gameTime.TotalGameTime.Seconds);
             }
-            // TODO : ajouter la logique de mise à jour ici
             foreach (Vetement vetement in _currentVetements)
             {
                 vetement.Update(gameTime);
             }
-          
-            _time = 90 - gameTime.TotalGameTime.Seconds + (gameTime.TotalGameTime.Minutes * 60);
-            timegauje.Value = (_time * 10) /90;
 
-            moneygauje.Value = _money;
+
+            _time = 40 - (int)gameTime.TotalGameTime.TotalSeconds % 40;
+            timegauje.Value = (_time * 10) / 40;
+            if (_time <= 15 && _time > 0)
+            {
+                isFury = true;
+            }
+            else if (_time == 40)
+            {
+                isFury = false;
+            }
 
         }
 
@@ -97,10 +102,6 @@ namespace premieredemarque2
                 _status = 1;
                 return true;
             }
-            if(_money <= 0){
-                _status = 1;
-                return true;
-            }
 
             if (_joueur.stress >= 100)
             {
@@ -108,14 +109,14 @@ namespace premieredemarque2
                 return true;
             }
 
-            if (_joueur.nbVetementBought < 0)
+            if (_joueur.nbVetementBought < -2)
             {
                 _status = -2;
                 return true;
             }
 
             return false;
-           
+
         }
 
         private Boolean soldeTimeIsterminated()
@@ -129,30 +130,32 @@ namespace premieredemarque2
         /**
          * when there are not more solde, load solde
          */
-        public void loadSoldes(int currentTime){
+        public void loadSoldes(int currentTime)
+        {
 
             Random rnd = new Random();
-            for (var i = 0; i < this._maxSoldes; i++ )
+            for (var i = 0; i < this._maxSoldes; i++)
             {
                 Vetement vetement = new Vetement(this._jeu, rnd.Next(1, 100), 2, currentTime);
                 Vector2 vetementPosition = findEmptyCase(rnd);
-                    vetement.Initialize(vetementPosition);
-                    _currentVetements.Add(vetement);
+                vetement.Initialize(vetementPosition);
+                _currentVetements.Add(vetement);
             }
-    
+
         }
 
         private Vector2 findEmptyCase(Random rnd)
         {
 
-            int poxX = rnd.Next(1, _playground.getLengthX() -1);
-            int poxY = rnd.Next(1, _playground.getLengthY() -1);
-            while(_playground.isEmpty(poxX,poxY)){
+            int poxX = rnd.Next(1, _playground.getLengthX() - 1);
+            int poxY = rnd.Next(1, _playground.getLengthY() - 1);
+            while (_playground.isEmpty(poxX, poxY))
+            {
                 poxX = rnd.Next(1, _playground.getLengthX() - 1);
                 poxY = rnd.Next(1, _playground.getLengthY() - 1);
             }
 
-            return new Vector2(poxX*50 + 10, poxY*50);
+            return new Vector2(poxX * 50 + 10, poxY * 50);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -163,14 +166,16 @@ namespace premieredemarque2
                 vetement.Draw(spriteBatch);
             }
             timegauje.Draw(spriteBatch);
-            moneygauje.Draw(spriteBatch);
+            //moneygauje.Draw(spriteBatch);
         }
 
-        public void instersectVetement(Rectangle player, Boolean enemy){
+        public void instersectVetement(Rectangle player, Boolean enemy)
+        {
 
             Vetement vetementTemp = null;
-            foreach(Vetement vetement in _currentVetements ){
-                if (vetement.instersect(player))
+            foreach (Vetement vetement in _currentVetements)
+            {
+                if (vetement.instersect(player, enemy))
                 {
                     vetementTemp = vetement;
                 }
@@ -196,14 +201,16 @@ namespace premieredemarque2
             _failBoughtVetements.Add(vetement);
         }
 
-        public void takeSolde(Vetement vetement){
-            _money-= vetement.prix?1:2;
-            _joueur.nbVetementBought+= vetement.prix ? 1 : -1;
+        public void takeSolde(Vetement vetement)
+        {
+            _money -= vetement.prix ? 1 : 2;
+            _joueur.nbVetementBought += vetement.prix ? 1 : -1;
             _currentVetements.Remove(vetement);
             _boughtVetements.Add(vetement);
         }
 
-        public int getScore(){
+        public int getScore()
+        {
             return _score.getValue();
 
         }
@@ -211,7 +218,7 @@ namespace premieredemarque2
 
         public int time
         {
-         
+
             get
             {
                 return _time;
@@ -220,6 +227,6 @@ namespace premieredemarque2
 
     }
 
-    
+
 
 }

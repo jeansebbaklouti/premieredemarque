@@ -15,14 +15,15 @@ namespace premieredemarque2
 {
     class Map
     {
-        public int[,] _data;
-        public List<Rectangle> _murs;
-        public Texture2D _rect;
+        private List<Level> _levels;
+        private int[,] _data;
+        private Vector2 _start;
+        private Vector2 _bonus;
+        private List<Rectangle> _murs;
+        private Texture2D _rect;
+        private int TileSize = 50;
 
-        public int TileWidth = 50;
-        public int TileHeight = 50;
-
-        int[,] level1 =
+        int[,] map1 =
             {
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
@@ -30,7 +31,7 @@ namespace premieredemarque2
                 { 1,1,1,1,1,1,1,3,3,3,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
                 { 4,4,4,4,4,1,1,1,3,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
-                { 1,1,1,1,1,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,1,1,61, },
                 { 1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
                 { 4,4,4,4,4,1,1,6,1,6,1,1,1,1,1,1,1,1,1,1,2,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,6,1,1,1,1,1,1,1,1,1,1,1,2,1,1,4,4,4, },
@@ -39,9 +40,9 @@ namespace premieredemarque2
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
-                { 1,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
+                { 52,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
             };
-        int[,] level2 = 
+        int[,] map2 = 
             {
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
@@ -60,7 +61,45 @@ namespace premieredemarque2
                 { 1,1,4,4,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,6,11,11,11, },
                 { 1,1,4,4,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,6,11,11,11 }
             };
-        int[,] level3 = 
+        int[,] map3 = 
+            {
+                { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
+                { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1, },
+                { 1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,1, },
+                { 1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,1, },
+                { 1,1,1,1,1,2,2,1,1,5,5,5,5,5,5,5,5,1,1,2,2,1,1,1,1,1, },
+                { 1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,5,5,1,1,3,1,1,3,1,1,5,5,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,4,4,1,1,3,1,1,3,1,1,4,4,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,4,4,1,1,1,3,3,1,1,1,4,4,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1 }
+            };
+        int[,] map4 = 
+            {
+                { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
+                { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1, },
+                { 1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,1, },
+                { 1,1,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,1, },
+                { 1,1,1,1,1,2,2,1,1,5,5,5,5,5,5,5,5,1,1,2,2,1,1,1,1,1, },
+                { 1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,5,5,1,1,3,1,1,3,1,1,5,5,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,4,4,1,1,3,1,1,3,1,1,4,4,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,4,4,1,1,1,3,3,1,1,1,4,4,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1, },
+                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1 }
+            };
+        int[,] map5 = 
             {
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
@@ -82,57 +121,42 @@ namespace premieredemarque2
 
         public Map(GraphicsDeviceManager graphicsDevice, int level, List<Rectangle> murs)
         {
-            _data = getLevel(level);
-            _murs = murs;
-            _rect = new Texture2D(graphicsDevice.GraphicsDevice, 50, 50);
+
+            this._levels = new List<Level>();
+            _levels.Add(new Level(map1, new int[] {0, 15}, new int[] {1, 14}));
+            _levels.Add(new Level(map2, new int[] {0, 15}, new int[] {0, 15}));
+            _levels.Add(new Level(map3, new int[] {0, 15}, new int[] {0, 15}));
+            _levels.Add(new Level(map4, new int[] {0, 15}, new int[] {0, 15}));
+            _levels.Add(new Level(map5, new int[] {0, 15}, new int[] {0, 15}));
+
+            this.setLevel(level);
+            this._murs = murs;
+            this._rect = new Texture2D(graphicsDevice.GraphicsDevice, 50, 50);
             Color[] data = new Color[50 * 50];
             for (int i = 0; i < data.Length; ++i) data[i] = Color.Black;
-            _rect.SetData(data);
-        }
-
-        public int[,] getLevel(int level)
-        {
-            switch (level)
-            {
-                case 1:
-                    return level1;
-                    break;
-                case 2:
-                    return level2;
-                    break;
-                case 3:
-                    return level3;
-                    break;
-                default:
-                    return level1;
-                    break;
-            }
+            this._rect.SetData(data);
         }
 
         public void setLevel(int level)
         {
-            switch (level)
-            {
-                case 1:
-                    _data = level1;
-                    break;
-                case 2:
-                    _data = level2;
-                    break;
-                case 3:
-                    _data = level3;
-                    break;
-                default:
-                    _data = level1;
-                    break;
-            }
+            this._data = this._levels[level - 1].getMap();
+            this._start = this._levels[level - 1].getStart();
+            this._bonus = this._levels[level - 1].getBonus();
+        }
+
+        public Vector2 getStart()
+        {
+            return this._start;
+        }
+        public Vector2 getBonus()
+        {
+            return this._bonus;
         }
 
         public int getLengthY()
         {
             return this._data.GetLength(0);
         }
-
         public int getLengthX()
         {
             return this._data.GetLength(1);
@@ -141,15 +165,14 @@ namespace premieredemarque2
         public List<Rectangle> charger()
         {
             _murs.Clear();
-            for (int y = 0; y < _data.GetLength(0); y++)
+            for (int y = 0; y < this.getLengthY(); y++)
             {
-                for (int x = 0; x < _data.GetLength(1); x++)
+                for (int x = 0; x < this.getLengthX(); x++)
                 {
 
                     if (_data[y, x] != 1)
                     {
-                        Rectangle dest = new Rectangle(-10 + (x * TileWidth), y * TileHeight, 50, 50);
-                        _murs.Add(dest);
+                        _murs.Add(new Rectangle(-10 + (x * TileSize) + 7, y * TileSize + 7, 35, 35));
                     }
                 }
             }
@@ -158,25 +181,25 @@ namespace premieredemarque2
 
         public void afficher(SpriteBatch _sb, Texture2D myTexture)
         {
-            for (int y = 0; y < _data.GetLength(0); y++)
+            for (int y = 0; y < this.getLengthY(); y++)
             {
-                for (int x = 0; x < _data.GetLength(1); x++)
+                for (int x = 0; x < this.getLengthX(); x++)
                 {
-                    Rectangle dest = new Rectangle(-10 + (x * TileWidth), y * TileHeight, 50, 50);
-
                     _sb.Draw(myTexture,
-                            dest,
-                            new Rectangle((_data[y, x] - 1) * TileWidth, 0, 50, 50),
+                            new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
+                            new Rectangle((_data[y, x] - 1) % 10 * TileSize, (int)(_data[y, x] - 1) / 10 * TileSize, 50, 50),
                             Color.White);
 
                 }
             }
         }
 
-
         public Boolean isEmpty(int x, int y)
         {
-
+            if (y == this._start.X / this.TileSize && x == this._start.Y / this.TileSize)
+            {
+                return true;
+            }
             return (_data[y, x] != 1);
         }
     }

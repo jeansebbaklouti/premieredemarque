@@ -18,15 +18,20 @@ namespace premieredemarque2
         public Vector2 _position;
         public float _vitesse;
         public List<Texture2D> animationup, animationdown, animationleft, animationright;
+        public Texture2D animstun;
         public Rectangle hitbox;
         public int _direction; //0 = haut; 1 = bas; 2 = droite; 3 = gauche 4 = rien
         public float _noanimation;
         public Boolean marche;
         public Boolean taper;
+        public Boolean toucher;
+        public Boolean tuer;
         public int stress;
         public int tpsinvincible;
         public Boolean invincible;
         Gauje stressGauje;
+        public Boolean isFury;
+        public int stop;
 
         public int nbVetementBought = 0;
 
@@ -34,11 +39,14 @@ namespace premieredemarque2
         {
             tpsinvincible = 0;
             invincible = false;
+            tuer = false;
             taper = false;
+            toucher = false;
             stress = 0;
             _noanimation = 0;
             _jeu = jeu;
             _direction = 0;
+            stop = 0;
             _position = pos;
             hitbox = new Rectangle((int)pos.X, (int)pos.Y, 50, 50);
             _vitesse = 0;
@@ -50,13 +58,11 @@ namespace premieredemarque2
 
             marche = false;
 
-            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 50));
+            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 25));
         }
 
         public void charger()
         {
-
-
             animationup.Add(_jeu.Content.Load<Texture2D>("heros-up1"));
             animationup.Add(_jeu.Content.Load<Texture2D>("heros-up2"));
 
@@ -69,6 +75,7 @@ namespace premieredemarque2
             animationright.Add(_jeu.Content.Load<Texture2D>("heros-right1"));
             animationright.Add(_jeu.Content.Load<Texture2D>("heros-right2"));
 
+            animstun = _jeu.Content.Load<Texture2D>("ecrase");
             stressGauje.Initialize();
         }
 
@@ -77,95 +84,105 @@ namespace premieredemarque2
             int i = istoucher(lperso);
             if (i == -1 || invincible)
             {
-                if (new Rectangle(50, 50, 1180, 700).Intersects(this.hitbox) && touchemur(mur) == false)
+                if (new Rectangle(49, 49, 1182, 702).Intersects(this.hitbox) && touchemur(mur) == false)
                 {
-                    tpsinvincible++;
-                    if (tpsinvincible > 100)
-                    {
-                        tpsinvincible = 0;
-                        invincible = false;
-                    }
-                    KeyboardState currentKeys = Keyboard.GetState();
                     taper = false;
-                    if (currentKeys.IsKeyDown(Keys.Up) && (_direction != 1 || _vitesse == 0))
+                    tuer = false;
+                    toucher = false;
+                    if (stop == 0)
                     {
-                        _noanimation = (_noanimation + 1 * 0.25f) % 2;
-                        if (_direction != 0)
+                        tpsinvincible++;
+                        if (tpsinvincible > 100)
                         {
-                            _vitesse = 0;
+                            tpsinvincible = 0;
+                            invincible = false;
                         }
-                        if (_vitesse <= 20)
-                        {
-                            _vitesse += _acceleration;
-                        }
-                        _direction = 0;
-                    }
-                    else if (currentKeys.IsKeyDown(Keys.Down) && (_direction != 0 || _vitesse == 0))
-                    {
-                        _noanimation = (_noanimation + 1 * 0.25f) % 2;
-                        if (_direction != 1)
-                        {
-                            _vitesse = 0;
-                        }
-                        if (_vitesse <= 20)
-                        {
-                            _vitesse += _acceleration;
-                        }
-                        _direction = 1;
-                    }
-                    else if (currentKeys.IsKeyDown(Keys.Right) && (_direction != 3 || _vitesse == 0))
-                    {
-                        _noanimation = (_noanimation + 1 * 0.25f) % 2;
-                        if (_direction != 2)
-                        {
-                            _vitesse = 0;
-                        }
-                        if (_vitesse <= 20)
-                        {
-                            _vitesse += _acceleration;
-                        }
-                        _direction = 2;
-                    }
-                    else if (currentKeys.IsKeyDown(Keys.Left) && (_direction != 2 || _vitesse == 0))
-                    {
-                        _noanimation = (_noanimation + 1 * 0.25f) % 2;
-                        if (_direction != 3)
-                        {
-                            _vitesse = 0;
-                        }
-                        if (_vitesse <= 20)
-                        {
-                            _vitesse += _acceleration;
-                        }
-                        _direction = 3;
-                    }
-                    else
-                    {
-                        _vitesse -= _decceleration;
-                        _noanimation = 0;
-                        _vitesse = (_vitesse <= 0) ? 0 : _vitesse;
-                       
-                    }
+                        KeyboardState currentKeys = Keyboard.GetState();
 
-                    if (_direction == 0)
-                    {
-                        _position.Y -= _vitesse;
-                        hitbox.Y = (int)_position.Y;
+                        if (currentKeys.IsKeyDown(Keys.Up) && (_direction != 1 || _vitesse == 0))
+                        {
+                            _noanimation = (_noanimation + 1 * 0.25f) % 2;
+                            if (_direction != 0)
+                            {
+                                _vitesse = 0;
+                            }
+                            if (_vitesse <= 20)
+                            {
+                                _vitesse += _acceleration;
+                            }
+                            _direction = 0;
+                        }
+                        else if (currentKeys.IsKeyDown(Keys.Down) && (_direction != 0 || _vitesse == 0))
+                        {
+                            _noanimation = (_noanimation + 1 * 0.25f) % 2;
+                            if (_direction != 1)
+                            {
+                                _vitesse = 0;
+                            }
+                            if (_vitesse <= 20)
+                            {
+                                _vitesse += _acceleration;
+                            }
+                            _direction = 1;
+                        }
+                        else if (currentKeys.IsKeyDown(Keys.Right) && (_direction != 3 || _vitesse == 0))
+                        {
+                            _noanimation = (_noanimation + 1 * 0.25f) % 2;
+                            if (_direction != 2)
+                            {
+                                _vitesse = 0;
+                            }
+                            if (_vitesse <= 20)
+                            {
+                                _vitesse += _acceleration;
+                            }
+                            _direction = 2;
+                        }
+                        else if (currentKeys.IsKeyDown(Keys.Left) && (_direction != 2 || _vitesse == 0))
+                        {
+                            _noanimation = (_noanimation + 1 * 0.25f) % 2;
+                            if (_direction != 3)
+                            {
+                                _vitesse = 0;
+                            }
+                            if (_vitesse <= 20)
+                            {
+                                _vitesse += _acceleration;
+                            }
+                            _direction = 3;
+                        }
+                        else
+                        {
+                            _vitesse -= _decceleration;
+                            _noanimation = 0;
+                            _vitesse = (_vitesse <= 0) ? 0 : _vitesse;
+
+                        }
+
+                        if (_direction == 0)
+                        {
+                            _position.Y -= _vitesse;
+                            hitbox.Y = (int)_position.Y;
+                        }
+                        else if (_direction == 1)
+                        {
+                            _position.Y += _vitesse;
+                            hitbox.Y = (int)_position.Y;
+                        }
+                        else if (_direction == 2)
+                        {
+                            _position.X += _vitesse;
+                            hitbox.X = (int)_position.X;
+                        }
+                        else if (_direction == 3)
+                        {
+                            _position.X -= _vitesse;
+                            hitbox.X = (int)_position.X;
+                        }
                     }
-                    else if (_direction == 1)
+                    else if (stop > 0)
                     {
-                        _position.Y += _vitesse;
-                        hitbox.Y = (int)_position.Y;
-                    }
-                    else if (_direction == 2)
-                    {
-                        _position.X += _vitesse;
-                        hitbox.X = (int)_position.X;
-                    }
-                    else if (_direction == 3)
-                    {
-                        _position.X -= _vitesse;
-                        hitbox.X = (int)_position.X;
+                        stop--;
                     }
                 }
                 else
@@ -194,25 +211,35 @@ namespace premieredemarque2
                     _vitesse = 0;
                 }
                 marche = _vitesse > 0;
-                
+
             }
             else if (i != -1 && _vitesse >= 19.9)
             {
-                lperso.RemoveAt(i);
-                stress --;
+                //lperso.RemoveAt(i);
+                //tuer = true;
+                lperso[i].hitbox = new Rectangle(-1, -1, 0, 0);
+                lperso[i].vitesse = 0;
+                lperso[i].dead = _direction + 1;
+
+                stress--;
                 if (stress < 0)
                 {
                     stress = 0;
                 }
+                tuer = true;
                 taper = true;
             }
             else if (i != -1)
             {
-                stress ++;
-                
+                if (isFury == true)
+                {
+                    stop = 70;
+                }
+                stress++;
+                toucher = true;
                 invincible = true;
                 _vitesse = 0;
-                nbVetementBought--;
+                //nbVetementBought--;
             }
             stressGauje.Value = stress;
 
@@ -246,25 +273,30 @@ namespace premieredemarque2
         public void afficher(SpriteBatch _sb)
         {
 
-
-            switch (_direction)
+            if (stop == 0)
             {
-                case 0:
-                    _sb.Draw(animationup[(int)_noanimation], this._position, Color.White);
-                    break;
-                case 1:
-                    _sb.Draw(animationdown[(int)_noanimation], this._position, Color.White);
-                    break;
+                switch (_direction)
+                {
+                    case 0:
+                        _sb.Draw(animationup[(int)_noanimation], this._position, Color.White);
+                        break;
+                    case 1:
+                        _sb.Draw(animationdown[(int)_noanimation], this._position, Color.White);
+                        break;
 
-                case 2:
-                    _sb.Draw(animationright[(int)_noanimation], this._position, Color.White);
-                    break;
+                    case 2:
+                        _sb.Draw(animationright[(int)_noanimation], this._position, Color.White);
+                        break;
 
-                case 3:
-                    _sb.Draw(animationleft[(int)_noanimation], this._position, Color.White);
-                    break;
+                    case 3:
+                        _sb.Draw(animationleft[(int)_noanimation], this._position, Color.White);
+                        break;
+                }
             }
-
+            else if (stop > 0)
+            {
+                _sb.Draw(animstun, this._position, Color.White);
+            }
             stressGauje.Draw(_sb);
         }
     }

@@ -1,1 +1,2 @@
 C:\game\premieredemarque2\premieredemarque2\premieredemarque2Content\obj\x86\Debug\premieredemarque2Content.contentprojResolveAssemblyReference.cache
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2Content\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -2,22 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>SpriteFont1.spritefont</Source>
-      <Name>SpriteFont1</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2013-03-23T15:36:59.6974004+01:00</Time>
-    </Item>
-    <Item>
       <Source>cart_1.wav</Source>
       <Name>cart_1</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_1.xnb</Output>
-      <Time>2013-03-23T12:01:56+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_1.xnb</Output>
+      <Time>2013-03-24T08:41:08.328125+01:00</Time>
     </Item>
     <Item>
       <Source>cart_2.wav</Source>
@@ -25,8 +16,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_2.xnb</Output>
-      <Time>2013-03-23T12:01:56+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_2.xnb</Output>
+      <Time>2013-03-24T08:41:08.34375+01:00</Time>
     </Item>
     <Item>
       <Source>cart_3.wav</Source>
@@ -34,8 +25,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_3.xnb</Output>
-      <Time>2013-03-23T12:01:54+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_3.xnb</Output>
+      <Time>2013-03-24T08:41:08.34375+01:00</Time>
     </Item>
     <Item>
       <Source>cart_4.wav</Source>
@@ -43,8 +34,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_4.xnb</Output>
-      <Time>2013-03-23T12:01:54+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\cart_4.xnb</Output>
+      <Time>2013-03-24T08:41:08.359375+01:00</Time>
     </Item>
     <Item>
       <Source>walk_1.wav</Source>
@@ -52,8 +43,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_1.xnb</Output>
-      <Time>2013-03-23T12:01:44+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_1.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>walk_2.wav</Source>
@@ -61,8 +52,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_2.xnb</Output>
-      <Time>2013-03-23T12:01:42+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_2.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>walk_3.wav</Source>
@@ -70,8 +61,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_3.xnb</Output>
-      <Time>2013-03-23T12:01:42+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_3.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>walk_4.wav</Source>
@@ -79,8 +70,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_4.xnb</Output>
-      <Time>2013-03-23T12:01:40+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_4.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>walk_5.wav</Source>
@@ -88,8 +79,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_5.xnb</Output>
-      <Time>2013-03-23T12:01:40+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_5.xnb</Output>
+      <Time>2013-03-24T08:41:09.03125+01:00</Time>
     </Item>
     <Item>
       <Source>walk_6.wav</Source>
@@ -97,8 +88,17 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_6.xnb</Output>
-      <Time>2013-03-23T12:01:38+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\walk_6.xnb</Output>
+      <Time>2013-03-24T08:41:09.03125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2013-03-24T08:41:08.203125+01:00</Time>
     </Item>
     <Item>
       <Source>ambient_shop.mp3</Source>
@@ -106,9 +106,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ambient_shop.xnb</Output>
-      <Extra>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ambient_shop.wma</Extra>
-      <Time>2013-03-23T12:01:58+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ambient_shop.xnb</Output>
+      <Extra>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ambient_shop.wma</Extra>
+      <Time>2013-03-24T08:41:08.328125+01:00</Time>
     </Item>
     <Item>
       <Source>down1.png</Source>
@@ -116,8 +116,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\down1.xnb</Output>
-      <Time>2013-03-23T12:01:52+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\down1.xnb</Output>
+      <Time>2013-03-24T08:41:08.359375+01:00</Time>
     </Item>
     <Item>
       <Source>down2.png</Source>
@@ -125,8 +125,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\down2.xnb</Output>
-      <Time>2013-03-23T12:01:52+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\down2.xnb</Output>
+      <Time>2013-03-24T08:41:08.359375+01:00</Time>
     </Item>
     <Item>
       <Source>left1.png</Source>
@@ -134,8 +134,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\left1.xnb</Output>
-      <Time>2013-03-23T12:01:52+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\left1.xnb</Output>
+      <Time>2013-03-24T08:41:08.984375+01:00</Time>
     </Item>
     <Item>
       <Source>left2.png</Source>
@@ -143,8 +143,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\left2.xnb</Output>
-      <Time>2013-03-23T12:01:50+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\left2.xnb</Output>
+      <Time>2013-03-24T08:41:08.984375+01:00</Time>
     </Item>
     <Item>
       <Source>right1.png</Source>
@@ -152,8 +152,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\right1.xnb</Output>
-      <Time>2013-03-23T12:01:48+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\right1.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>right2.png</Source>
@@ -161,8 +161,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\right2.xnb</Output>
-      <Time>2013-03-23T12:01:46+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\right2.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>up1.png</Source>
@@ -170,8 +170,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\up1.xnb</Output>
-      <Time>2013-03-23T12:01:44+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\up1.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>up2.png</Source>
@@ -179,8 +179,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\up2.xnb</Output>
-      <Time>2013-03-23T12:01:44+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\up2.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>sprite.png</Source>
@@ -188,8 +188,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sprite.xnb</Output>
-      <Time>2013-03-23T12:11:22+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sprite.xnb</Output>
+      <Time>2013-03-24T10:23:52+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous10.png</Source>
@@ -197,8 +197,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous10.xnb</Output>
-      <Time>2013-03-23T12:49:00+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous10.xnb</Output>
+      <Time>2013-03-24T09:15:52.46875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous100.png</Source>
@@ -206,8 +206,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous100.xnb</Output>
-      <Time>2013-03-23T12:47:10+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous100.xnb</Output>
+      <Time>2013-03-24T09:15:55.515625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous20.png</Source>
@@ -215,8 +215,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous20.xnb</Output>
-      <Time>2013-03-23T12:48:50+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous20.xnb</Output>
+      <Time>2013-03-24T09:15:52.484375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous30.png</Source>
@@ -224,8 +224,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous30.xnb</Output>
-      <Time>2013-03-23T12:48:44+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous30.xnb</Output>
+      <Time>2013-03-24T09:15:52.484375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous40.png</Source>
@@ -233,8 +233,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous40.xnb</Output>
-      <Time>2013-03-23T12:48:36+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous40.xnb</Output>
+      <Time>2013-03-24T09:15:52.5+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous50.png</Source>
@@ -242,8 +242,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous50.xnb</Output>
-      <Time>2013-03-23T12:48:10+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous50.xnb</Output>
+      <Time>2013-03-24T09:15:52.5+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous60.png</Source>
@@ -251,8 +251,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous60.xnb</Output>
-      <Time>2013-03-23T12:47:58+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous60.xnb</Output>
+      <Time>2013-03-24T09:15:52.515625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous70.png</Source>
@@ -260,8 +260,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous70.xnb</Output>
-      <Time>2013-03-23T12:47:50+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous70.xnb</Output>
+      <Time>2013-03-24T09:15:52.515625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous80.png</Source>
@@ -269,8 +269,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous80.xnb</Output>
-      <Time>2013-03-23T12:47:40+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous80.xnb</Output>
+      <Time>2013-03-24T09:15:52.515625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-sous90.png</Source>
@@ -278,8 +278,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous90.xnb</Output>
-      <Time>2013-03-23T12:47:32+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-sous90.xnb</Output>
+      <Time>2013-03-24T09:15:55.5+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress10.png</Source>
@@ -287,8 +287,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress10.xnb</Output>
-      <Time>2013-03-23T12:54:56+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress10.xnb</Output>
+      <Time>2013-03-24T09:15:55.515625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress100.png</Source>
@@ -296,8 +296,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress100.xnb</Output>
-      <Time>2013-03-23T12:53:20+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress100.xnb</Output>
+      <Time>2013-03-24T09:15:55.625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress20.png</Source>
@@ -305,8 +305,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress20.xnb</Output>
-      <Time>2013-03-23T12:54:48+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress20.xnb</Output>
+      <Time>2013-03-24T09:15:55.53125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress30.png</Source>
@@ -314,8 +314,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress30.xnb</Output>
-      <Time>2013-03-23T12:54:34+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress30.xnb</Output>
+      <Time>2013-03-24T09:15:55.53125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress40.png</Source>
@@ -323,8 +323,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress40.xnb</Output>
-      <Time>2013-03-23T12:54:26+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress40.xnb</Output>
+      <Time>2013-03-24T09:15:55.546875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress50.png</Source>
@@ -332,8 +332,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress50.xnb</Output>
-      <Time>2013-03-23T12:54:16+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress50.xnb</Output>
+      <Time>2013-03-24T09:15:55.546875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress60.png</Source>
@@ -341,8 +341,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress60.xnb</Output>
-      <Time>2013-03-23T12:54:08+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress60.xnb</Output>
+      <Time>2013-03-24T09:15:55.578125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress70.png</Source>
@@ -350,8 +350,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress70.xnb</Output>
-      <Time>2013-03-23T12:54:00+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress70.xnb</Output>
+      <Time>2013-03-24T09:15:55.59375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress80.png</Source>
@@ -359,8 +359,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress80.xnb</Output>
-      <Time>2013-03-23T12:53:48+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress80.xnb</Output>
+      <Time>2013-03-24T09:15:55.609375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-stress90.png</Source>
@@ -368,8 +368,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress90.xnb</Output>
-      <Time>2013-03-23T12:53:40+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-stress90.xnb</Output>
+      <Time>2013-03-24T09:15:55.609375+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps.png</Source>
@@ -377,8 +377,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps.xnb</Output>
-      <Time>2013-03-23T12:31:24+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps.xnb</Output>
+      <Time>2013-03-24T09:15:55.703125+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps10.png</Source>
@@ -386,8 +386,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps10.xnb</Output>
-      <Time>2013-03-23T12:51:24+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps10.xnb</Output>
+      <Time>2013-03-24T09:15:55.625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps100.png</Source>
@@ -395,8 +395,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps100.xnb</Output>
-      <Time>2013-03-23T12:49:54+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps100.xnb</Output>
+      <Time>2013-03-24T09:15:55.6875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps20.png</Source>
@@ -404,8 +404,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps20.xnb</Output>
-      <Time>2013-03-23T12:51:16+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps20.xnb</Output>
+      <Time>2013-03-24T09:15:55.625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps30.png</Source>
@@ -413,8 +413,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps30.xnb</Output>
-      <Time>2013-03-23T12:51:06+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps30.xnb</Output>
+      <Time>2013-03-24T09:15:55.640625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps40.png</Source>
@@ -422,8 +422,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps40.xnb</Output>
-      <Time>2013-03-23T12:50:56+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps40.xnb</Output>
+      <Time>2013-03-24T09:15:55.640625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps50.png</Source>
@@ -431,8 +431,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps50.xnb</Output>
-      <Time>2013-03-23T12:50:48+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps50.xnb</Output>
+      <Time>2013-03-24T09:15:55.65625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps60.png</Source>
@@ -440,8 +440,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps60.xnb</Output>
-      <Time>2013-03-23T12:50:40+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps60.xnb</Output>
+      <Time>2013-03-24T09:15:55.65625+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps70.png</Source>
@@ -449,8 +449,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps70.xnb</Output>
-      <Time>2013-03-23T12:50:18+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps70.xnb</Output>
+      <Time>2013-03-24T09:15:55.671875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps80.png</Source>
@@ -458,8 +458,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps80.xnb</Output>
-      <Time>2013-03-23T12:50:08+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps80.xnb</Output>
+      <Time>2013-03-24T09:15:55.671875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge-temps90.png</Source>
@@ -467,8 +467,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps90.xnb</Output>
-      <Time>2013-03-23T12:50:02+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge-temps90.xnb</Output>
+      <Time>2013-03-24T09:15:55.6875+01:00</Time>
     </Item>
     <Item>
       <Source>jauge0.png</Source>
@@ -476,8 +476,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge0.xnb</Output>
-      <Time>2013-03-23T12:49:08+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\jauge0.xnb</Output>
+      <Time>2013-03-24T09:15:52.46875+01:00</Time>
     </Item>
     <Item>
       <Source>damier.png</Source>
@@ -485,8 +485,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\damier.xnb</Output>
-      <Time>2013-03-23T10:30:46+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\damier.xnb</Output>
+      <Time>2013-03-24T09:15:52.375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle1.png</Source>
@@ -494,8 +494,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle1.xnb</Output>
-      <Time>2013-03-23T10:32:30+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle1.xnb</Output>
+      <Time>2013-03-24T09:15:55.734375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle2.png</Source>
@@ -503,8 +503,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle2.xnb</Output>
-      <Time>2013-03-23T10:34:20+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle2.xnb</Output>
+      <Time>2013-03-24T09:15:55.734375+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle3.png</Source>
@@ -512,8 +512,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle3.xnb</Output>
-      <Time>2013-03-23T10:34:52+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle3.xnb</Output>
+      <Time>2013-03-24T09:15:55.75+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle4.png</Source>
@@ -521,8 +521,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle4.xnb</Output>
-      <Time>2013-03-23T11:12:08+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle4.xnb</Output>
+      <Time>2013-03-24T09:15:55.75+01:00</Time>
     </Item>
     <Item>
       <Source>obstacle5.png</Source>
@@ -530,89 +530,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle5.xnb</Output>
-      <Time>2013-03-23T11:46:40+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-down1.png</Source>
-      <Name>heros-down1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down1.xnb</Output>
-      <Time>2013-03-23T16:30:02+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-down2.png</Source>
-      <Name>heros-down2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down2.xnb</Output>
-      <Time>2013-03-23T16:30:14+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-left1.png</Source>
-      <Name>heros-left1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left1.xnb</Output>
-      <Time>2013-03-23T16:30:44+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-left2.png</Source>
-      <Name>heros-left2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left2.xnb</Output>
-      <Time>2013-03-23T16:30:56+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-right1.png</Source>
-      <Name>heros-right1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right1.xnb</Output>
-      <Time>2013-03-23T16:31:30+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-right2.png</Source>
-      <Name>heros-right2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right2.xnb</Output>
-      <Time>2013-03-23T16:31:42+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-up1.png</Source>
-      <Name>heros-up1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up1.xnb</Output>
-      <Time>2013-03-23T16:29:14+01:00</Time>
-    </Item>
-    <Item>
-      <Source>heros-up2.png</Source>
-      <Name>heros-up2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up2.xnb</Output>
-      <Time>2013-03-23T16:29:46+01:00</Time>
-    </Item>
-    <Item>
-      <Source>robe.jpg</Source>
-      <Name>robe</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\robe.xnb</Output>
-      <Time>2013-03-23T19:17:00.7414569+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\obstacle5.xnb</Output>
+      <Time>2013-03-24T09:15:55.75+01:00</Time>
     </Item>
     <Item>
       <Source>menu.png</Source>
@@ -620,8 +539,89 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\menu.xnb</Output>
-      <Time>2013-03-23T14:13:32+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\menu.xnb</Output>
+      <Time>2013-03-24T09:21:52.296875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-down1.png</Source>
+      <Name>heros-down1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down1.xnb</Output>
+      <Time>2013-03-24T09:15:52.390625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-down2.png</Source>
+      <Name>heros-down2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-down2.xnb</Output>
+      <Time>2013-03-24T09:15:52.40625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-left1.png</Source>
+      <Name>heros-left1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left1.xnb</Output>
+      <Time>2013-03-24T09:15:52.40625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-left2.png</Source>
+      <Name>heros-left2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-left2.xnb</Output>
+      <Time>2013-03-24T09:15:52.421875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-right1.png</Source>
+      <Name>heros-right1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right1.xnb</Output>
+      <Time>2013-03-24T09:15:52.421875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-right2.png</Source>
+      <Name>heros-right2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-right2.xnb</Output>
+      <Time>2013-03-24T09:15:52.421875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-up1.png</Source>
+      <Name>heros-up1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up1.xnb</Output>
+      <Time>2013-03-24T09:15:52.4375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros-up2.png</Source>
+      <Name>heros-up2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\heros-up2.xnb</Output>
+      <Time>2013-03-24T09:15:52.4375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>robe.jpg</Source>
+      <Name>robe</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\robe.xnb</Output>
+      <Time>2013-03-24T08:41:09.015625+01:00</Time>
     </Item>
     <Item>
       <Source>promo1.png</Source>
@@ -629,8 +629,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo1.xnb</Output>
-      <Time>2013-03-23T20:32:10.738414+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo1.xnb</Output>
+      <Time>2013-03-24T09:15:55.75+01:00</Time>
     </Item>
     <Item>
       <Source>promo2.png</Source>
@@ -638,8 +638,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo2.xnb</Output>
-      <Time>2013-03-23T20:32:13.7065837+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo2.xnb</Output>
+      <Time>2013-03-24T09:15:55.765625+01:00</Time>
     </Item>
     <Item>
       <Source>promo3.png</Source>
@@ -647,8 +647,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo3.xnb</Output>
-      <Time>2013-03-23T20:32:14.7536436+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo3.xnb</Output>
+      <Time>2013-03-24T09:15:55.765625+01:00</Time>
     </Item>
     <Item>
       <Source>promo4.png</Source>
@@ -656,8 +656,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo4.xnb</Output>
-      <Time>2013-03-23T20:32:17.4517979+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo4.xnb</Output>
+      <Time>2013-03-24T09:15:55.765625+01:00</Time>
     </Item>
     <Item>
       <Source>promo5.png</Source>
@@ -665,48 +665,184 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo5.xnb</Output>
-      <Time>2013-03-23T20:32:19.340906+01:00</Time>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo5.xnb</Output>
+      <Time>2013-03-24T09:15:55.765625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>scream_01.wav</Source>
+      <Name>scream_01</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\scream_01.xnb</Output>
+      <Time>2013-03-24T08:46:11.4375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>scream_02.wav</Source>
+      <Name>scream_02</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\scream_02.xnb</Output>
+      <Time>2013-03-24T08:46:11.453125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>scream_03.wav</Source>
+      <Name>scream_03</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\scream_03.xnb</Output>
+      <Time>2013-03-24T08:46:11.484375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>theme.mp3</Source>
+      <Name>theme</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\theme.xnb</Output>
+      <Extra>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\theme.wma</Extra>
+      <Time>2013-03-24T08:47:05+01:00</Time>
+    </Item>
+    <Item>
+      <Source>concurrentes.png</Source>
+      <Name>concurrentes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\concurrentes.xnb</Output>
+      <Time>2013-03-24T09:15:52.359375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>ecrase.png</Source>
+      <Name>ecrase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\ecrase.xnb</Output>
+      <Time>2013-03-24T09:15:52.390625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>promo-ko.png</Source>
+      <Name>promo-ko</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo-ko.xnb</Output>
+      <Time>2013-03-24T09:15:55.78125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>promo-ok.png</Source>
+      <Name>promo-ok</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\promo-ok.xnb</Output>
+      <Time>2013-03-24T09:15:55.78125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sang-bas.png</Source>
+      <Name>sang-bas</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-bas.xnb</Output>
+      <Time>2013-03-24T09:15:55.78125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sang-droite.png</Source>
+      <Name>sang-droite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-droite.xnb</Output>
+      <Time>2013-03-24T09:15:55.796875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sang-gauche.png</Source>
+      <Name>sang-gauche</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-gauche.xnb</Output>
+      <Time>2013-03-24T09:15:55.796875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sang-haut.png</Source>
+      <Name>sang-haut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\sang-haut.xnb</Output>
+      <Time>2013-03-24T09:15:55.8125+01:00</Time>
+    </Item>
+    <Item>
+      <Source>punch_1.wav</Source>
+      <Name>punch_1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\punch_1.xnb</Output>
+      <Time>2013-03-24T09:16:39.96875+01:00</Time>
+    </Item>
+    <Item>
+      <Source>punch_2.wav</Source>
+      <Name>punch_2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\punch_2.xnb</Output>
+      <Time>2013-03-24T09:16:39.984375+01:00</Time>
+    </Item>
+    <Item>
+      <Source>punch_3.wav</Source>
+      <Name>punch_3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\punch_3.xnb</Output>
+      <Time>2013-03-24T09:16:40.015625+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
-      <TargetProfile>HiDef</TargetProfile>
+      <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\game\premieredemarque2\premieredemarque2\premieredemarque2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\game\premieredemarque2\premieredemarque2\premieredemarque2Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\game\premieredemarque2\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-03-23T09:33:53.8523396+01:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-03-23T09:02:14.03125+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
