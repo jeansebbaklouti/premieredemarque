@@ -14,6 +14,14 @@ namespace premieredemarque2
 
         private SpriteFont police;
 
+        public Texture2D     textureBonus10;
+
+        public Texture2D textureBonus100;
+
+        public Texture2D textureMalus;
+
+
+
         private Game1 _game;
 
         private Vector2 Position;
@@ -91,10 +99,19 @@ namespace premieredemarque2
 
         }
 
+
+
+
         public void Initialize()
         {
 
             police = _game.Content.Load<SpriteFont>("SpriteFont1");
+
+        
+            textureBonus10 = this._game.Content.Load<Texture2D>("bonus10");
+            textureBonus100 = this._game.Content.Load<Texture2D>("bonus100");
+            textureMalus = this._game.Content.Load<Texture2D>("malus100");
+  
 
         }
 
@@ -110,7 +127,27 @@ namespace premieredemarque2
         {
 
             foreach(Bonus bonus in _currentBonus){
-                spriteBatch.DrawString(police, bonus.texToDisplay, bonus.position, Color.Green);
+               // spriteBatch.DrawString(police, bonus.texToDisplay, bonus.position, Color.Green);
+                if (bonus.type > 2)
+                {
+                    spriteBatch.Draw(textureMalus, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                }
+                else
+                {
+                    if (bonus.type == 1)
+                    {
+                        spriteBatch.Draw(textureBonus100, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                    }
+                    else
+                    {
+
+                        if (bonus.type == 2)
+                        {
+                            spriteBatch.Draw(textureBonus10, bonus.position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+                        }
+                    }
+
+                }
 
             }
 
