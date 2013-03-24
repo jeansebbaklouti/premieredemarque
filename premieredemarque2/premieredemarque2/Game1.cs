@@ -206,6 +206,8 @@ namespace premieredemarque2
                 else if (_gestion.getStatus() == 1)
                 {
                     currentLevel++;
+                    startTime = (int)gameTime.TotalGameTime.TotalSeconds;
+                    _gestion.isFury = false;
                     Initialize();
                     LoadContent();
                 }
@@ -302,7 +304,7 @@ namespace premieredemarque2
                 }
             }
 
-            // spriteBatch.DrawString(police, _gestion._time.ToString(), Vector2.Zero, Color.Black);
+            spriteBatch.DrawString(police, _gestion._time.ToString(), new Vector2(10,10), Color.Black);
 
             spriteBatch.End();
 

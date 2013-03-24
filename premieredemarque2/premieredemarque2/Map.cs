@@ -24,6 +24,7 @@ namespace premieredemarque2
         private Texture2D _rect;
         private int TileSize = 50;
         private Boolean first = true;
+        public Rectangle sortie;
 
         int[,] map1 =
             {
@@ -123,7 +124,6 @@ namespace premieredemarque2
 
         public Map(GraphicsDeviceManager graphicsDevice, int level, List<Rectangle> murs)
         {
-
             this._levels = new List<Level>();
             _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {4, 15}));
             _levels.Add(new Level(map2, new int[] {1, 15}, new int[] {4, 15}));
@@ -208,6 +208,7 @@ namespace premieredemarque2
                     {
                         if (_data[y, x] == 61 && first)
                         {
+                            this.sortie = new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50);
                             _sb.Draw(myTexture,
                                 new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
                                 new Rectangle((_data[y, x]) % 10 * TileSize, (_data[y, x]) / 10 * TileSize, 50, 50),

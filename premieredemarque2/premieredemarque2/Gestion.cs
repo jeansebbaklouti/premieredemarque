@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using premieredemarque2.vetement;
 using Microsoft.Xna.Framework;
-
 using Microsoft.Xna.Framework.Graphics;
 
 namespace premieredemarque2
@@ -83,7 +82,7 @@ namespace premieredemarque2
             if (GameState == 1)
             {
                 _time = 41 - ((int)gameTime.TotalGameTime.TotalSeconds - _jeu.startTime) % 41;
-                timegauje.Value = (_time * 10) / 41;
+                timegauje.Value = ((_time * 11)-1) / 41;
                 if (_time <= 15 && _time > 0)
                 {
                     isFury = true;
@@ -98,9 +97,15 @@ namespace premieredemarque2
 
         public Boolean endLevel()
         {
-            if (_time <= 0)
+            if (isFury && _joueur.hitbox.Intersects(_playground.sortie))
             {
                 _status = 1;
+                return true;
+            }
+
+            if (_time == 1)
+            {
+                _status = -1;
                 return true;
             }
 
