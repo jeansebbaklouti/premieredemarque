@@ -16,6 +16,7 @@ namespace premieredemarque2
     class Map
     {
         private List<Level> _levels;
+        private Level _activeLevel;
         private int[,] _data;
         private Vector2 _start;
         private Vector2 _bonus;
@@ -40,7 +41,7 @@ namespace premieredemarque2
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
-                { 52,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
+                { 1,55,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }
             };
         int[,] map2 = 
             {
@@ -123,7 +124,7 @@ namespace premieredemarque2
         {
 
             this._levels = new List<Level>();
-            _levels.Add(new Level(map1, new int[] {0, 15}, new int[] {1, 14}));
+            _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {1, 14}));
             _levels.Add(new Level(map2, new int[] {0, 15}, new int[] {0, 15}));
             _levels.Add(new Level(map3, new int[] {0, 15}, new int[] {0, 15}));
             _levels.Add(new Level(map4, new int[] {0, 15}, new int[] {0, 15}));
@@ -139,6 +140,7 @@ namespace premieredemarque2
 
         public void setLevel(int level)
         {
+            this._activeLevel = this._levels[level - 1];
             this._data = this._levels[level - 1].getMap();
             this._start = this._levels[level - 1].getStart();
             this._bonus = this._levels[level - 1].getBonus();
@@ -170,7 +172,7 @@ namespace premieredemarque2
                 for (int x = 0; x < this.getLengthX(); x++)
                 {
 
-                    if (_data[y, x] != 1)
+                    if (_data[y, x] != 1 && (x != this._activeLevel.getStartX() || y != this._activeLevel.getStartY()))
                     {
                         _murs.Add(new Rectangle(-10 + (x * TileSize) + 7, y * TileSize + 7, 35, 35));
                     }
@@ -196,10 +198,6 @@ namespace premieredemarque2
 
         public Boolean isEmpty(int x, int y)
         {
-            if (y == this._start.X / this.TileSize && x == this._start.Y / this.TileSize)
-            {
-                return true;
-            }
             return (_data[y, x] != 1);
         }
     }

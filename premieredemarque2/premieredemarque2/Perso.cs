@@ -16,6 +16,13 @@ namespace premieredemarque2
 {
     class Perso
     {
+        /// <summary>
+        /// INTEGRER
+        /// </summary>
+        #region CHANGEMENT
+        //PRENDRE TOUTE LA CLASSE
+        #endregion
+
         public static float acceleration = 0.6f;
         public static float decceleration = 0.9f;
         public Game1 G;
@@ -43,7 +50,7 @@ namespace premieredemarque2
             attente = 200;
             dead = 0;
             G = jeu;
-            hitbox = new Rectangle((int)pos.X + 1, (int)pos.Y + 1, 50, 50);
+            hitbox = new Rectangle((int)pos.X + 1, (int)pos.Y + 1, 49, 49);
             rand = new Random();
             position = pos;
             Fumee = new List<Texture2D>();
@@ -52,6 +59,7 @@ namespace premieredemarque2
 
         public void Charger()
         {
+
             this.idPerso = rand.Next(12);
             if (!isFurie)
             {
@@ -69,8 +77,16 @@ namespace premieredemarque2
                 sd = G.Content.Load<Texture2D>("sang-droite");
                 sg = G.Content.Load<Texture2D>("sang-gauche");
 
-                //Fumee.Add(G.Content.Load<Texture2D>("Fumee1"));
-                //Fumee.Add(G.Content.Load<Texture2D>("Fumee2"));
+
+
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-haut1"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-haut2"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-bas1"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-bas2"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-droite1"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-droite2"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-gauche1"));
+                Fumee.Add(G.Content.Load<Texture2D>("fumee-gauche2"));
             }
             else
             {
@@ -91,34 +107,45 @@ namespace premieredemarque2
                 }
                 else
                 {
-                    if (direction == 0)
-                    {
-                        _sb.Draw(SpriteOthers, this.position,
+                    _sb.Draw(SpriteOthers, this.position,
                                 new Rectangle(this.idPerso * 50, 0, 50, 50),
                                 Color.White);
-                        //_sb.Draw(Fumee[(int)NoAnimation], new Vector2(position.X, position.Y + 50), Color.White);
-                    }
-                    else if (direction == 1)
-                    {
-                        _sb.Draw(SpriteOthers, this.position,
-                                new Rectangle(this.idPerso * 50, 0, 50, 50),
-                                Color.White);
-                        //_sb.Draw(Fumee[(int)NoAnimation], new Vector2(position.X, position.Y - 50), Color.White);
-                    }
-                    else if (direction == 2)
-                    {
-                        _sb.Draw(SpriteOthers, this.position,
-                                new Rectangle(this.idPerso * 50, 0, 50, 50),
-                                Color.White);
-                        //_sb.Draw(Fumee[(int)NoAnimation], new Vector2(position.X + 50, position.Y), Color.White);
-                    }
-                    else if (direction == 3)
-                    {
-                        _sb.Draw(SpriteOthers, this.position,
-                                new Rectangle(this.idPerso * 50, 0, 50, 50),
-                                Color.White);
-                        //_sb.Draw(Fumee[(int)NoAnimation], new Vector2(position.X - 50, position.Y), Color.White);
-                    }
+                    #region cmt
+
+                    // if (direction == 0)
+                    // {
+                    //     //_sb.Draw(Fumee[direction * 2 + (int)NoAnimation], new Vector2(position.X, position.Y + 40), Color.White);
+                    //     _sb.Draw(SpriteOthers, this.position,
+                    //             new Rectangle(this.idPerso * 50, 0, 50, 50),
+                    //             Color.White);
+                    // 
+                    // }
+                    // else if (direction == 1)
+                    // {
+                    //     //_sb.Draw(Fumee[direction * 2 + (int)NoAnimation], new Vector2(position.X, position.Y - 30), Color.White);
+                    //     _sb.Draw(SpriteOthers, this.position,
+                    //             new Rectangle(this.idPerso * 50, 0, 50, 50),
+                    //             Color.White);
+                    // 
+                    // }
+                    // else if (direction == 2)
+                    // {
+                    //     //_sb.Draw(Fumee[direction * 2 + (int)NoAnimation], new Vector2(position.X - 55, position.Y + 25), Color.White);
+                    //     _sb.Draw(SpriteOthers, this.position,
+                    //             new Rectangle(this.idPerso * 50, 0, 50, 50),
+                    //             Color.White);
+                    // 
+                    // }
+                    // else if (direction == 3)
+                    // {
+                    //     //_sb.Draw(Fumee[direction * 2 + (int)NoAnimation], new Vector2(position.X + 30, position.Y + 25), Color.White);
+                    //     _sb.Draw(SpriteOthers, this.position,
+                    //             new Rectangle(this.idPerso * 50, 0, 50, 50),
+                    //             Color.White);
+                    // 
+                    // }
+
+                    #endregion
                 }
             }
             else if (dead == 1)

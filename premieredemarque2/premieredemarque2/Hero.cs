@@ -18,6 +18,9 @@ namespace premieredemarque2
         public Vector2 _position;
         public float _vitesse;
         public List<Texture2D> animationup, animationdown, animationleft, animationright;
+        //LISTE ANIMATIONS FUMEE
+        public List<Texture2D> fumeup, fumedown, fumeleft, fumeright;
+        //
         public Texture2D animstun;
         public Rectangle hitbox;
         public int _direction; //0 = haut; 1 = bas; 2 = droite; 3 = gauche 4 = rien
@@ -32,11 +35,15 @@ namespace premieredemarque2
         Gauje stressGauje;
         public Boolean isFury;
         public int stop;
+        //AJOUT DE FUMEE LORSQUE ON PEUT TUER LES PNG
+        public Boolean Fume;
+        //
 
         public int nbVetementBought = 0;
 
         public Hero(Game1 jeu, Vector2 pos)
         {
+            Fume = false;
             tpsinvincible = 0;
             invincible = false;
             tuer = false;
@@ -56,13 +63,22 @@ namespace premieredemarque2
             animationright = new List<Texture2D>();
             animationleft = new List<Texture2D>();
 
+            //INSTANCIE LES LISTE ANIM FUMEE
+            fumeup = new List<Texture2D>();
+            fumedown = new List<Texture2D>();
+            fumeright = new List<Texture2D>();
+            fumeleft = new List<Texture2D>();
+            //
+
             marche = false;
 
-            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 25));
+            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 50));
         }
 
         public void charger()
         {
+
+
             animationup.Add(_jeu.Content.Load<Texture2D>("heros-up1"));
             animationup.Add(_jeu.Content.Load<Texture2D>("heros-up2"));
 
@@ -74,6 +90,20 @@ namespace premieredemarque2
 
             animationright.Add(_jeu.Content.Load<Texture2D>("heros-right1"));
             animationright.Add(_jeu.Content.Load<Texture2D>("heros-right2"));
+
+            //IMPORT IMAGE FUMEE
+            fumeup.Add(_jeu.Content.Load<Texture2D>("fumee-haut1"));
+            fumeup.Add(_jeu.Content.Load<Texture2D>("fumee-haut2"));
+
+            fumedown.Add(_jeu.Content.Load<Texture2D>("fumee-bas1"));
+            fumedown.Add(_jeu.Content.Load<Texture2D>("fumee-bas2"));
+
+            fumeleft.Add(_jeu.Content.Load<Texture2D>("fumee-gauche1"));
+            fumeleft.Add(_jeu.Content.Load<Texture2D>("fumee-gauche2"));
+
+            fumeright.Add(_jeu.Content.Load<Texture2D>("fumee-droite1"));
+            fumeright.Add(_jeu.Content.Load<Texture2D>("fumee-droite2"));
+            //
 
             animstun = _jeu.Content.Load<Texture2D>("ecrase");
             stressGauje.Initialize();
@@ -158,6 +188,17 @@ namespace premieredemarque2
                             _vitesse = (_vitesse <= 0) ? 0 : _vitesse;
 
                         }
+
+                        //DEFINI LE BOOLEAN FUME
+                        if (_vitesse >= 19.9)
+                        {
+                            Fume = true;
+                        }
+                        else
+                        {
+                            Fume = false;
+                        }
+                        //
 
                         if (_direction == 0)
                         {
@@ -272,23 +313,28 @@ namespace premieredemarque2
 
         public void afficher(SpriteBatch _sb)
         {
-
-            if (stop == 0)
+            //AJOUT CONDITION POUR SAVOIR SI ON PEUT TUER LES CLIENTS
+            if (stop == 0 && Fume == false)
             {
                 switch (_direction)
                 {
                     case 0:
+
                         _sb.Draw(animationup[(int)_noanimation], this._position, Color.White);
                         break;
                     case 1:
+
                         _sb.Draw(animationdown[(int)_noanimation], this._position, Color.White);
+
                         break;
 
                     case 2:
+
                         _sb.Draw(animationright[(int)_noanimation], this._position, Color.White);
                         break;
 
                     case 3:
+
                         _sb.Draw(animationleft[(int)_noanimation], this._position, Color.White);
                         break;
                 }
@@ -297,6 +343,31 @@ namespace premieredemarque2
             {
                 _sb.Draw(animstun, this._position, Color.White);
             }
+            else if (Fume == true)
+            {
+                switch (_direction)
+                {
+                    case 0:
+                        _sb.Draw(fumeup[(int)_noanimation], new Vector2(this._position.X, this._position.Y + 50), Color.White);
+                        _sb.Draw(animationup[(int)_noanimation], this._position, Color.White);
+                        break;
+                    case 1:
+                        _sb.Draw(fumedown[(int)_noanimation], new Vector2(this._position.X, this._position.Y - 20), Color.White);
+                        _sb.Draw(animationdown[(int)_noanimation], this._position, Color.White);
+                        break;
+
+                    case 2:
+                        _sb.Draw(fumeright[(int)_noanimation], new Vector2(this._position.X - 70, this._position.Y + 25), Color.White);
+                        _sb.Draw(animationright[(int)_noanimation], this._position, Color.White);
+                        break;
+
+                    case 3:
+                        _sb.Draw(fumeleft[(int)_noanimation], new Vector2(this._position.X + 45, this._position.Y + 25), Color.White);
+                        _sb.Draw(animationleft[(int)_noanimation], this._position, Color.White);
+                        break;
+                }
+            }
+            //
             stressGauje.Draw(_sb);
         }
     }

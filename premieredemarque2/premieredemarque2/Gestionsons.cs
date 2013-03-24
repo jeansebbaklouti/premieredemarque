@@ -15,11 +15,13 @@ namespace premieredemarque2
         public List<SoundEffect> Lpas;
         public List<SoundEffect> Lcri;
         public List<SoundEffect> Ltoucher;
+        public SoundEffect Splash;
         public Song ambiance, theme;
         public List<SoundEffect> Lroule;
         public Random rand;
         public int indicerand, indicerand2;
         public float espacesoundpas, espacesoundcart;
+        public Boolean firstload;
 
         public Gestionsons(Game1 g)
         {
@@ -33,6 +35,7 @@ namespace premieredemarque2
             indicerand2 = 4;
             espacesoundpas = 0;
             espacesoundcart = 0;
+            firstload = false;
         }
 
         public void charger()
@@ -57,21 +60,25 @@ namespace premieredemarque2
             Ltoucher.Add(jeu.Content.Load<SoundEffect>("punch_2"));
             Ltoucher.Add(jeu.Content.Load<SoundEffect>("punch_3"));
 
-            ambiance = jeu.Content.Load<Song>("ambient_shop");
+            Splash = jeu.Content.Load<SoundEffect>("smash_dirty");
             theme = jeu.Content.Load<Song>("theme");
         }
 
-        public void Maj(Boolean marche, Boolean taper, Boolean tuer, Boolean toucher)
+        public void Maj(Boolean marche, Boolean taper, Boolean tuer, Boolean toucher, int time)
         {
-            if (MediaPlayer.State == MediaState.Stopped)
+            if (time == 41 && firstload == false)
             {
-                MediaPlayer.Volume = 2.0f;
-                //MediaPlayer.Play(ambiance);
+                MediaPlayer.Stop();
                 MediaPlayer.Play(theme);
+                firstload = true;
+            }
+            else if (time != 41 && firstload == true)
+            {
+                firstload = false;
             }
 
 
-            int tmp, tmp2;
+            int tmp, tmp2, tmp3;
             if (marche == true)
             {
                 tmp = (int)espacesoundpas;
@@ -133,6 +140,7 @@ namespace premieredemarque2
             } while (tmp == indicerand);
 
             Lcri[indicerand].Play();
+            Splash.Play();
         }
 
         public void touchsound()

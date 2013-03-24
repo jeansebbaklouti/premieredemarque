@@ -17,11 +17,15 @@ namespace premieredemarque2
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public int GameState = 0;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Texture2D SpriteMenu;
         SpriteFont police;
         Hero joueur;
+        private Texture2D SpriteSplash;
+        private Texture2D SpriteGameOver;
 
         private Gestion _gestion;
 
@@ -38,6 +42,7 @@ namespace premieredemarque2
         Texture2D SpriteOthers;
 
         int currentLevel = 1;
+        public int startTime = 0;
 
         public Game1()
         {
@@ -45,7 +50,7 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
         }
 
         /// <summary>
@@ -59,7 +64,6 @@ namespace premieredemarque2
             rnd = new Random();
             murs = new List<Rectangle>();
             sons = new Gestionsons(this);
-            SpriteMenu = Content.Load<Texture2D>("menu");
             // TODO : ajouter la logique d’initialisation ici
 
             map = new Map(graphics, currentLevel, murs);
@@ -103,6 +107,9 @@ namespace premieredemarque2
             joueur.charger();
             murs = map.charger();
             SpriteOthers = Content.Load<Texture2D>("concurrentes");
+            SpriteMenu = Content.Load<Texture2D>("menu");
+            SpriteSplash = Content.Load<Texture2D>("splash");
+            SpriteGameOver = Content.Load<Texture2D>("game-over");
 
 
             foreach (Perso p in Ennemis)
@@ -131,35 +138,51 @@ namespace premieredemarque2
         /// <param name="gameTime">Fournit un aperçu des valeurs de temps.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (!_gestion.endLevel())
+            KeyboardState keys = Keyboard.GetState();
+            if (this.GameState != 1)
             {
-                // Allows the game to exit
-                KeyboardState keys = Keyboard.GetState();
-                if (keys.IsKeyDown(Keys.Escape))
-                    this.Exit();
-
-                _gestion.instersectVetement(joueur.hitbox, false);
-                _gestion.Update(gameTime);
-
-
-                foreach (Perso p in Ennemis)
+                if (keys.GetPressedKeys().Length > 0)
                 {
-                    _gestion.instersectVetement(p.hitbox, true);
-                    p.Maj(gameTime, murs, _gestion.isFury);
+                    this.GameState = 1;
+                    this.startTime = (int)gameTime.TotalGameTime.TotalSeconds;
                 }
-
-
-                // TODO: Add your update logic here
-                joueur.isFury = _gestion.isFury;
-                joueur.Maj(gameTime, Ennemis, murs);
-
-                sons.Maj(joueur.marche, joueur.taper, joueur.tuer, joueur.toucher);
-                base.Update(gameTime);
             }
-            else
-            {
-                currentLevel++;
-                Initialize();
+            else {
+                if (!_gestion.endLevel())
+                {
+                    // Allows the game to exit
+                    if (keys.IsKeyDown(Keys.Escape))
+                        this.Exit();
+
+                    _gestion.instersectVetement(joueur.hitbox, false);
+                    _gestion.Update(gameTime, this.GameState);
+
+
+                    foreach (Perso p in Ennemis)
+                    {
+                        _gestion.instersectVetement(p.hitbox, true);
+                        p.Maj(gameTime, murs, _gestion.isFury);
+                    }
+
+
+                    // TODO: Add your update logic here
+                    joueur.isFury = _gestion.isFury;
+                    joueur.Maj(gameTime, Ennemis, murs);
+
+                    sons.Maj(joueur.marche, joueur.taper, joueur.tuer, joueur.toucher, _gestion._time);
+                    base.Update(gameTime);
+                }
+                else if (_gestion.getStatus() == 1)
+                {
+                    currentLevel++;
+                    Initialize();
+                }
+                else
+                {
+                    GameState = -1;
+                    currentLevel = 1;
+                    Initialize();
+                }
             }
         }
 
@@ -169,45 +192,88 @@ namespace premieredemarque2
         /// <param name="gameTime">Fournit un aperçu des valeurs de temps.</param>
         protected override void Draw(GameTime gameTime)
         {
-            if (!_gestion.endLevel())
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+
+            if (this.GameState == 0)
             {
-                GraphicsDevice.Clear(Color.CornflowerBlue);
-
-                // TODO : ajouter le code de dessin ici
-
-                // Start drawing
-
-                spriteBatch.Begin();
-
-                map.afficher(spriteBatch, SpriteTexture);
-                spriteBatch.Draw(SpriteMenu, new Rectangle(0, 0, 1280, 100), Color.White);
-
-
-                _gestion.Draw(spriteBatch);
-
-
-                foreach (Perso p in Ennemis)
-                {
-                    p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
-                }
-
-                joueur.afficher(spriteBatch);
-
-                spriteBatch.DrawString(police, _gestion._time.ToString(), Vector2.Zero, Color.White);
-
-                spriteBatch.End();
-
-                base.Draw(gameTime);
+                // Splascreen
+                spriteBatch.Draw(SpriteSplash, new Rectangle(0, 0, 1280, 800), Color.White);
             }
+            else if (this.GameState == -1)
+            {
+                // Game Over
+                spriteBatch.Draw(SpriteGameOver, new Rectangle(0, 0, 1280, 800), Color.White);
+            }
+            else
+            {
+                if (!_gestion.endLevel())
+                {
+
+                    map.afficher(spriteBatch, SpriteTexture);
+                    spriteBatch.Draw(SpriteMenu, new Rectangle(0, 0, 1280, 100), Color.White);
+
+
+
+
+                    // ORDRE AFFICHAGE
+                    if (joueur.invincible == true && _gestion.isFury == true)
+                    {
+                        foreach (Perso p in Ennemis)
+                        {
+                            if (p.dead != 0)
+                            {
+                                p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
+                            }
+                        }
+                        _gestion.Draw(spriteBatch);
+                        joueur.afficher(spriteBatch);
+                        foreach (Perso p in Ennemis)
+                        {
+                            if (p.dead == 0)
+                            {
+                                p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
+                            }
+                        }
+
+
+                    }
+                    else
+                    {
+                        foreach (Perso p in Ennemis)
+                        {
+                            if (p.dead != 0)
+                            {
+                                p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
+                            }
+                        }
+                        _gestion.Draw(spriteBatch);
+                        foreach (Perso p in Ennemis)
+                        {
+                            if (p.dead == 0)
+                            {
+                                p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
+                            }
+                        }
+                        joueur.afficher(spriteBatch);
+                    }
+                }
+            }
+
+            spriteBatch.DrawString(police, _gestion._time.ToString(), Vector2.Zero, Color.Black);
+
+            spriteBatch.End();
+
+            base.Draw(gameTime);
         }
 
         private Vector2 findEmptyCase(Random rnd)
         {
             int poxX = rnd.Next(1, 23);
-            int poxY = rnd.Next(1, 16);
+            int poxY = rnd.Next(1, 15);
             while (map.isEmpty(poxX, poxY))
             {
-                poxX = rnd.Next(1, 22);
+                poxX = rnd.Next(1, 23);
                 poxY = rnd.Next(1, 15);
             }
             return new Vector2(poxX * 50f - 10, poxY * 50f);

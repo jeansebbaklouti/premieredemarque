@@ -32,8 +32,6 @@ namespace premieredemarque2
 
         private Gauje timegauje;
 
-        private Gauje moneygauje;
-
         private Hero _joueur;
 
         private int _status = 0;
@@ -54,7 +52,7 @@ namespace premieredemarque2
             timegauje = new Gauje(jeu, "temps", new Vector2(160, 25));
 
             _money = 10;
-            _time = 40;
+            _time = 41;
 
         }
 
@@ -63,7 +61,7 @@ namespace premieredemarque2
             timegauje.Initialize();
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, int GameState)
         {
 
             if (soldeTimeIsterminated())
@@ -82,15 +80,18 @@ namespace premieredemarque2
             }
 
 
-            _time = 40 - (int)gameTime.TotalGameTime.TotalSeconds % 40;
-            timegauje.Value = (_time * 10) / 40;
-            if (_time <= 15 && _time > 0)
+            if (GameState == 1)
             {
-                isFury = true;
-            }
-            else if (_time == 40)
-            {
-                isFury = false;
+                _time = 41 - ((int)gameTime.TotalGameTime.TotalSeconds - _jeu.startTime) % 41;
+                timegauje.Value = (_time * 10) / 41;
+                if (_time <= 15 && _time > 0)
+                {
+                    isFury = true;
+                }
+                else if (_time == 41)
+                {
+                    isFury = false;
+                }
             }
 
         }
@@ -103,7 +104,7 @@ namespace premieredemarque2
                 return true;
             }
 
-            if (_joueur.stress >= 100)
+            if (_joueur.stress >= 10)
             {
                 _status = -1;
                 return true;
@@ -166,7 +167,6 @@ namespace premieredemarque2
                 vetement.Draw(spriteBatch);
             }
             timegauje.Draw(spriteBatch);
-            //moneygauje.Draw(spriteBatch);
         }
 
         public void instersectVetement(Rectangle player, Boolean enemy)
@@ -212,6 +212,12 @@ namespace premieredemarque2
         public int getScore()
         {
             return _score.getValue();
+
+        }
+
+        public int getStatus()
+        {
+            return _status;
 
         }
 
