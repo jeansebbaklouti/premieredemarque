@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using premieredemarque2.vetement;
 using Microsoft.Xna.Framework;
-
 using Microsoft.Xna.Framework.Graphics;
 
 namespace premieredemarque2
@@ -13,8 +12,8 @@ namespace premieredemarque2
     {
         private int _maxSoldes;
 
-        private int _nbVetementBought =0;
-        private List<Vetement> _currentVetements;
+        private int _nbVetementBought = 0;
+        public List<Vetement> _currentVetements;
 
         private List<Vetement> _boughtVetements;
 
@@ -84,7 +83,7 @@ namespace premieredemarque2
             if (GameState == 1)
             {
                 _time = 41 - ((int)gameTime.TotalGameTime.TotalSeconds - _jeu.startTime) % 41;
-                timegauje.Value = (_time * 10) / 41;
+                timegauje.Value = ((_time * 11)-1) / 41;
                 if (_time <= 15 && _time > 0)
                 {
                     isFury = true;
@@ -99,9 +98,15 @@ namespace premieredemarque2
 
         public Boolean endLevel()
         {
-            if (_time <= 0)
+            if (isFury && _joueur.hitbox.Intersects(_playground.sortie))
             {
                 _status = 1;
+                return true;
+            }
+
+            if (_time == 1)
+            {
+                _status = -1;
                 return true;
             }
 
@@ -157,7 +162,7 @@ namespace premieredemarque2
                 poxY = rnd.Next(1, _playground.getLengthY() - 1);
             }
 
-            return new Vector2(poxX * 50 + 10, poxY * 50);
+            return new Vector2(-10 + poxX * 50, poxY * 50);
         }
 
         public void Draw(SpriteBatch spriteBatch)

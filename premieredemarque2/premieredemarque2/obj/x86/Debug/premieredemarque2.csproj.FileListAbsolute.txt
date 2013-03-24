@@ -294,3 +294,12 @@ C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premiere
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\smash_1.wav
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\smash_dirty.wav
 C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\taking_cash.wav
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus-fin.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus10.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\bonus100.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\malus100.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game_over.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.xnb
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.wma
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\music_intro.mp3
+C:\Documents and Settings\Pauline\Mes documents\GitHub\premieredemarque\premieredemarque2\premieredemarque2\bin\x86\Debug\Content\game_over.wav

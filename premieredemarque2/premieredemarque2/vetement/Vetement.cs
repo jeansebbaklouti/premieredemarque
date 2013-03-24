@@ -56,9 +56,9 @@ namespace premieredemarque2.vetement
 
             // Set the starting position of the player around the middle of the screen and to the back
             Position = position;
-            hitbox = new Rectangle((int)Position.X, (int)Position.Y, 50, 50);
+            hitbox = new Rectangle(-10 + (int)Position.X, (int)Position.Y, 50, 50);
 
-            priceArea = new Circle(new Vector2((Position.X + 50 / 2), (Position.Y + 50 / 2)), 200);
+            priceArea = new Circle(new Vector2(-10 + (Position.X + 50 / 2), (Position.Y + 50 / 2)), 200);
         }
 
         public void Update(GameTime gameTime)

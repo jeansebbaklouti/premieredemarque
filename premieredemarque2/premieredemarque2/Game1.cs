@@ -43,6 +43,13 @@ namespace premieredemarque2
 
         int currentLevel = 1;
         public int startTime = 0;
+        public int stopTime = 0;
+
+        private Boolean couponActif = false;
+        private Coupon cp;
+
+        public Boolean loadGame = false;
+        public Boolean endGame = false;
 
         public Game1()
         {
@@ -50,7 +57,7 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
         }
 
         /// <summary>
@@ -64,10 +71,8 @@ namespace premieredemarque2
             rnd = new Random();
             murs = new List<Rectangle>();
             sons = new Gestionsons(this);
-            // TODO : ajouter la logique d’initialisation ici
 
             map = new Map(graphics, currentLevel, murs);
-            // joueur = new Hero(this, new Vector2(400, 400));
             joueur = new Hero(this, map.getStart());
             _gestion = new Gestion(this, 4, map, joueur);
             _gestion.charger();
@@ -141,8 +146,21 @@ namespace premieredemarque2
             KeyboardState keys = Keyboard.GetState();
             if (this.GameState != 1)
             {
-                if (keys.GetPressedKeys().Length > 0)
+                if (this.GameState == 0 && !loadGame)
                 {
+                    MediaPlayer.Play(sons.SplashSound);
+                    loadGame = true;
+                }
+                if (this.GameState == -1 && !endGame)
+                {
+                    sons.OverSound.Play();
+                    endGame = true;
+                }
+                if (keys.GetPressedKeys().Length > 0 
+                    && (this.stopTime == 0 || ((int)gameTime.TotalGameTime.TotalSeconds-this.stopTime) > 2))
+                {
+                    loadGame = false;
+                    endGame = false;
                     this.GameState = 1;
                     this.startTime = (int)gameTime.TotalGameTime.TotalSeconds;
                 }
@@ -153,6 +171,19 @@ namespace premieredemarque2
                     // Allows the game to exit
                     if (keys.IsKeyDown(Keys.Escape))
                         this.Exit();
+
+                    if (keys.IsKeyDown(Keys.P))
+                    {
+                        currentLevel++;
+                        Initialize();
+                        LoadContent();
+                    }
+                    if (keys.IsKeyDown(Keys.M))
+                    {
+                        currentLevel--;
+                        Initialize();
+                        LoadContent();
+                    }
 
                     _gestion.instersectVetement(joueur.hitbox, false);
                     _gestion.Update(gameTime, this.GameState);
@@ -175,13 +206,19 @@ namespace premieredemarque2
                 else if (_gestion.getStatus() == 1)
                 {
                     currentLevel++;
+                    startTime = (int)gameTime.TotalGameTime.TotalSeconds;
+                    _gestion.isFury = false;
                     Initialize();
+                    LoadContent();
                 }
                 else
                 {
+                    stopTime = (int)gameTime.TotalGameTime.TotalSeconds;
                     GameState = -1;
                     currentLevel = 1;
+                    sons.stopTheme();
                     Initialize();
+                    LoadContent();
                 }
             }
         }
@@ -210,10 +247,17 @@ namespace premieredemarque2
                 if (!_gestion.endLevel())
                 {
 
-                    map.afficher(spriteBatch, SpriteTexture);
+                    map.afficher(spriteBatch, SpriteTexture, _gestion.isFury);
                     spriteBatch.Draw(SpriteMenu, new Rectangle(0, 0, 1280, 100), Color.White);
 
-
+                    // Affichage Bonus coupon
+                    // if (_gestion.isFury && !couponActif)
+                    // {
+                    //     cp = new Coupon(this, 15, gameTime.TotalGameTime.Seconds, map.getBonus());
+                    //     cp.Initialize();
+                    //     couponActif = true;
+                    //     _gestion._currentVetements.Add(cp);
+                    // }
 
 
                     // ORDRE AFFICHAGE
@@ -260,7 +304,7 @@ namespace premieredemarque2
                 }
             }
 
-            spriteBatch.DrawString(police, _gestion._time.ToString(), Vector2.Zero, Color.Black);
+            spriteBatch.DrawString(police, _gestion._time.ToString(), new Vector2(10,10), Color.Black);
 
             spriteBatch.End();
 
