@@ -94,6 +94,7 @@ namespace premieredemarque2
                     isFury = false;
                 }
             }
+            _score.Update(gameTime);
         }
 
         public Boolean endLevel()
