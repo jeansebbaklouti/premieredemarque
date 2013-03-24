@@ -210,7 +210,7 @@ namespace premieredemarque2
             _currentVetements.Remove(vetement);
             _boughtVetements.Add(vetement);
 
-            _score.addBonus(Score.BonusType.takeObject, _joueur._position);
+            _score.addBonus(vetement.prix ? Score.BonusType.takeObject : Score.BonusType.takeObject, _joueur._position);
 
         }
 
