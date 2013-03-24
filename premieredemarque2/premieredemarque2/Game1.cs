@@ -57,7 +57,7 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
         }
 
         /// <summary>
@@ -200,6 +200,8 @@ namespace premieredemarque2
                     joueur.isFury = _gestion.isFury;
                     joueur.Maj(gameTime, Ennemis, murs);
 
+                    _gestion.updateAfterPlayer();
+
                     sons.Maj(joueur.marche, joueur.taper, joueur.tuer, joueur.toucher, _gestion._time);
                     base.Update(gameTime);
                 }
@@ -291,7 +293,7 @@ namespace premieredemarque2
                                 p.afficher(spriteBatch, SpriteOthers, _gestion.isFury);
                             }
                         }
-                        _gestion.Draw(spriteBatch);
+                       
                         foreach (Perso p in Ennemis)
                         {
                             if (p.dead == 0)
@@ -300,6 +302,7 @@ namespace premieredemarque2
                             }
                         }
                         joueur.afficher(spriteBatch);
+                        _gestion.Draw(spriteBatch);
                     }
                 }
             }

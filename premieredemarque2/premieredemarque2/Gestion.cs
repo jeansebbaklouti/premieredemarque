@@ -96,6 +96,21 @@ namespace premieredemarque2
             _score.Update(gameTime);
         }
 
+        public void updateAfterPlayer()
+        {
+
+            if(_joueur.tuer){
+                _score.addBonus( Score.BonusType.kill, _joueur._position);
+            }
+            if (_joueur.toucher)
+            {
+                _score.addBonus(Score.BonusType.fall, _joueur._position);
+            }
+        }
+
+
+
+
         public Boolean endLevel()
         {
             if (isFury && _joueur.hitbox.Intersects(_playground.sortie))
@@ -215,7 +230,7 @@ namespace premieredemarque2
             _currentVetements.Remove(vetement);
             _boughtVetements.Add(vetement);
 
-            _score.addBonus(vetement.prix ? Score.BonusType.takeObject : Score.BonusType.takeObject, _joueur._position);
+            _score.addBonus(vetement.prix ? Score.BonusType.takeObject : Score.BonusType.loseObject, _joueur._position);
 
         }
 
