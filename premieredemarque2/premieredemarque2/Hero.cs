@@ -39,6 +39,10 @@ namespace premieredemarque2
         public Boolean Fume;
         //
 
+        public int cptpietiner=0;
+        public int cpttuer = 0;
+
+
         public int nbVetementBought = 0;
 
         public Hero(Game1 jeu, Vector2 pos)
@@ -127,14 +131,18 @@ namespace premieredemarque2
                             tpsinvincible = 0;
                             invincible = false;
                         }
-                        KeyboardState currentKeys = Keyboard.GetState();
+                        KeyboardState currentKeys = Keyboard.GetState();                   
 
                         if (currentKeys.IsKeyDown(Keys.Up) && (_direction != 1 || _vitesse == 0))
                         {
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 0)
                             {
-                                _vitesse = 0;
+                                _vitesse -= 12;
+                                if (_vitesse < 0)
+                                {
+                                    _vitesse = 0;
+                                }
                             }
                             if (_vitesse <= 20)
                             {
@@ -147,7 +155,11 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 1)
                             {
-                                _vitesse = 0;
+                                _vitesse -= 12;
+                                if (_vitesse < 0)
+                                {
+                                    _vitesse = 0;
+                                }
                             }
                             if (_vitesse <= 20)
                             {
@@ -160,7 +172,11 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 2)
                             {
-                                _vitesse = 0;
+                                _vitesse -= 12;
+                                if (_vitesse < 0)
+                                {
+                                    _vitesse = 0;
+                                }
                             }
                             if (_vitesse <= 20)
                             {
@@ -173,7 +189,11 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 3)
                             {
-                                _vitesse = 0;
+                                _vitesse -= 12;
+                                if (_vitesse < 0)
+                                {
+                                    _vitesse = 0;
+                                }
                             }
                             if (_vitesse <= 20)
                             {
@@ -252,7 +272,7 @@ namespace premieredemarque2
                     _vitesse = 0;
                 }
                 marche = _vitesse > 0;
-
+                
             }
             else if (i != -1 && _vitesse >= 19.9)
             {
@@ -261,8 +281,8 @@ namespace premieredemarque2
                 lperso[i].hitbox = new Rectangle(-1, -1, 0, 0);
                 lperso[i].vitesse = 0;
                 lperso[i].dead = _direction + 1;
-
-                stress--;
+                cpttuer++;
+                stress --;
                 if (stress < 0)
                 {
                     stress = 0;
@@ -275,12 +295,14 @@ namespace premieredemarque2
                 if (isFury == true)
                 {
                     stop = 70;
+                    nbVetementBought--;
+                    cptpietiner++;
                 }
-                stress++;
+                stress ++;
                 toucher = true;
                 invincible = true;
                 _vitesse = 0;
-                //nbVetementBought--;
+                
             }
             stressGauje.Value = stress;
 
@@ -319,27 +341,27 @@ namespace premieredemarque2
                 switch (_direction)
                 {
                     case 0:
-
+                        
                         _sb.Draw(animationup[(int)_noanimation], this._position, Color.White);
                         break;
                     case 1:
-
+                        
                         _sb.Draw(animationdown[(int)_noanimation], this._position, Color.White);
 
                         break;
 
                     case 2:
-
+                        
                         _sb.Draw(animationright[(int)_noanimation], this._position, Color.White);
                         break;
 
                     case 3:
-
+                        
                         _sb.Draw(animationleft[(int)_noanimation], this._position, Color.White);
                         break;
                 }
             }
-            else if (stop > 0)
+            else if(stop > 0)
             {
                 _sb.Draw(animstun, this._position, Color.White);
             }
