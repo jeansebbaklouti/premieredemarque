@@ -37,6 +37,8 @@ namespace premieredemarque2
 
         private static int PARTY_TIME = 90;
 
+        private int lastObjectTaken ;
+
         public Gestion(Game1 jeu, int maxSoldes, Map playground, Hero joueur)
         {
             this._joueur = joueur;
@@ -52,6 +54,7 @@ namespace premieredemarque2
 
             _time = PARTY_TIME;
             _time = 41;
+            lastObjectTaken = _time;
 
         }
 
@@ -105,6 +108,13 @@ namespace premieredemarque2
             if (_joueur.toucher)
             {
                 _score.addBonus(Score.BonusType.fall, _joueur._position);
+            }
+
+            if (lastObjectTaken - _time   >= 5)
+            {
+                _joueur.stress++;
+                //ugly hack
+                lastObjectTaken = _time;
             }
         }
 
@@ -212,6 +222,8 @@ namespace premieredemarque2
                 else
                 {
                     takeSolde(vetementTemp);
+                     lastObjectTaken =  _time;
+                    
                 }
 
             }
