@@ -106,7 +106,7 @@ namespace premieredemarque2
 
             if (_time == 1)
             {
-                _status = -1;
+                _status = -3;
                 return true;
             }
 

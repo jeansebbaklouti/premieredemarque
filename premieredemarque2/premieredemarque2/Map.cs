@@ -15,7 +15,7 @@ namespace premieredemarque2
 {
     class Map
     {
-        private List<Level> _levels;
+        public List<Level> _levels;
         private Level _activeLevel;
         private int[,] _data;
         private Vector2 _start;
@@ -25,7 +25,28 @@ namespace premieredemarque2
         private int TileSize = 50;
         private Boolean first = true;
         public Rectangle sortie;
+        public static Random rd;
+        public int alea;
 
+        int[,] map0 = 
+        {
+            { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,             },
+            { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,             },
+            { 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,             },
+            { 8,3,6,1,1,1,1,1,1,1,1,1,42,45,42,1,1,1,1,1,1,1,1,1,1,41,         },
+            { 8,2,46,1,1,1,1,61,9,10,1,1,1,5,1,1,1,9,10,61,1,1,1,1,1,45,       },
+            { 8,1,1,1,1,1,1,1,19,20,1,1,1,1,1,1,1,19,20,1,1,1,1,1,1,8,         },
+            { 8,1,1,2,5,47,1,1,1,1,1,1,22,16,24,1,1,1,1,1,1,1,1,1,1,8,         },
+            { 8,1,1,49,48,2,1,1,2,3,1,1,34,28,35,1,41,6,5,3,2,45,1,1,1,41,     },
+            { 52,1,1,1,1,1,1,1,5,6,1,1,27,31,26,1,45,2,49,6,46,41,1,1,1,45,    },
+            { 53,1,1,1,1,1,1,1,1,1,1,1,41,45,41,1,1,1,1,1,1,1,1,1,1,41,        },
+            { 8,1,1,1,41,1,1,1,9,10,1,1,1,1,1,1,1,9,10,1,1,1,1,1,1,8,          },
+            { 8,1,1,41,45,41,1,61,19,20,1,1,1,1,1,1,1,19,20,61,1,1,1,1,1,8,    },
+            { 8,1,1,1,41,1,1,1,1,1,1,1,2,3,2,1,1,1,1,1,1,1,1,1,1,45,           },
+            { 8,1,1,1,1,1,1,1,1,1,1,1,48,6,5,1,1,1,1,1,1,1,1,1,1,41,           },
+            { 8,2,48,3,6,5,2,6,3,49,6,3,49,2,3,6,49,3,6,2,3,6,2,2,47,42,       },
+            { 8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8              },
+        };
         int[,] map1 =
             {
                 { 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4, },
@@ -119,12 +140,14 @@ namespace premieredemarque2
                 { 1,1,4,4,1,1,1,4,4,1,1,3,1,1,3,1,1,4,4,1,1,1,4,4,1,1, },
                 { 1,1,4,4,1,1,1,4,4,1,1,1,3,3,1,1,1,4,4,1,1,1,4,4,1,1, },
                 { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1, },
-                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1 }
+                { 1,1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,61 }
             };
 
         public Map(GraphicsDeviceManager graphicsDevice, int level, List<Rectangle> murs)
         {
+            rd = new Random();
             this._levels = new List<Level>();
+            _levels.Add(new Level(map0, new int[] {1, 10}, new int[] {4, 15}));
             _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {4, 15}));
             _levels.Add(new Level(map2, new int[] {1, 15}, new int[] {4, 15}));
             _levels.Add(new Level(map3, new int[] {1, 15}, new int[] {4, 15}));
@@ -137,6 +160,8 @@ namespace premieredemarque2
             Color[] data = new Color[50 * 50];
             for (int i = 0; i < data.Length; ++i) data[i] = Color.Black;
             this._rect.SetData(data);
+
+            // alea = rd.Next(1, NbCaisses()+1);
         }
 
         public void setLevel(int level)
@@ -213,7 +238,7 @@ namespace premieredemarque2
                                 new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
                                 new Rectangle((_data[y, x]) % 10 * TileSize, (_data[y, x]) / 10 * TileSize, 50, 50),
                                 Color.White);
-                            first = false;
+                            first =false;
                         }
                         else
                         {
@@ -231,6 +256,20 @@ namespace premieredemarque2
         public Boolean isEmpty(int x, int y)
         {
             return (_data[y, x] != 1);
+        }
+
+        public int NbCaisses()
+        {
+            int nb = 0;
+            for (int y = 0; y < _data.GetLength(0); y++)
+                {
+                    for (int x = 0; x < _data.GetLength(1); x++)
+                    {
+                        if (_data[y, x] == 61)
+                            nb++;
+                    }
+            }
+            return nb;
         }
     }
 

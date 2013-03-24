@@ -41,7 +41,7 @@ namespace premieredemarque2
 
         Texture2D SpriteOthers;
 
-        int currentLevel = 1;
+        int currentLevel = 6;
         public int startTime = 0;
         public int stopTime = 0;
 
@@ -57,7 +57,7 @@ namespace premieredemarque2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1280;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace premieredemarque2
                 }
                 else if (_gestion.getStatus() == 1)
                 {
-                    currentLevel++;
+                    currentLevel = (currentLevel + 1) % map._levels.Count;
                     startTime = (int)gameTime.TotalGameTime.TotalSeconds;
                     _gestion.isFury = false;
                     Initialize();
