@@ -138,7 +138,7 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 0)
                             {
-                                _vitesse -= 12;
+                                _vitesse -= 10;
                                 if (_vitesse < 0)
                                 {
                                     _vitesse = 0;
@@ -155,7 +155,7 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 1)
                             {
-                                _vitesse -= 12;
+                                _vitesse -= 10;
                                 if (_vitesse < 0)
                                 {
                                     _vitesse = 0;
@@ -172,7 +172,7 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 2)
                             {
-                                _vitesse -= 12;
+                                _vitesse -= 10;
                                 if (_vitesse < 0)
                                 {
                                     _vitesse = 0;
@@ -189,7 +189,7 @@ namespace premieredemarque2
                             _noanimation = (_noanimation + 1 * 0.25f) % 2;
                             if (_direction != 3)
                             {
-                                _vitesse -= 12;
+                                _vitesse -= 10;
                                 if (_vitesse < 0)
                                 {
                                     _vitesse = 0;

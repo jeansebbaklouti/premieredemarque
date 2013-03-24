@@ -144,6 +144,11 @@ namespace premieredemarque2
         protected override void Update(GameTime gameTime)
         {
             KeyboardState keys = Keyboard.GetState();
+
+            // Allows the game to exit
+            if (keys.IsKeyDown(Keys.Escape))
+                this.Exit();
+
             if (this.GameState != 1)
             {
                 if (this.GameState == 0 && !loadGame)
@@ -168,22 +173,6 @@ namespace premieredemarque2
             else {
                 if (!_gestion.endLevel())
                 {
-                    // Allows the game to exit
-                    if (keys.IsKeyDown(Keys.Escape))
-                        this.Exit();
-
-                    if (keys.IsKeyDown(Keys.P))
-                    {
-                        currentLevel++;
-                        Initialize();
-                        LoadContent();
-                    }
-                    if (keys.IsKeyDown(Keys.M))
-                    {
-                        currentLevel--;
-                        Initialize();
-                        LoadContent();
-                    }
 
                     _gestion.instersectVetement(joueur.hitbox, false);
                     _gestion.Update(gameTime, this.GameState);
@@ -304,7 +293,7 @@ namespace premieredemarque2
                 }
             }
 
-            spriteBatch.DrawString(police, _gestion._time.ToString(), new Vector2(10,10), Color.Black);
+            // spriteBatch.DrawString(police, _gestion._time.ToString(), new Vector2(10,10), Color.Black);
 
             spriteBatch.End();
 
