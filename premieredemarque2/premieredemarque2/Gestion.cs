@@ -14,7 +14,7 @@ namespace premieredemarque2
         private int _maxSoldes;
 
         private int _nbVetementBought = 0;
-        private List<Vetement> _currentVetements;
+        public List<Vetement> _currentVetements;
 
         private List<Vetement> _boughtVetements;
 
@@ -156,7 +156,7 @@ namespace premieredemarque2
                 poxY = rnd.Next(1, _playground.getLengthY() - 1);
             }
 
-            return new Vector2(poxX * 50 + 10, poxY * 50);
+            return new Vector2(-10 + poxX * 50, poxY * 50);
         }
 
         public void Draw(SpriteBatch spriteBatch)

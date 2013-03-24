@@ -22,6 +22,8 @@ namespace premieredemarque2
         public int indicerand, indicerand2;
         public float espacesoundpas, espacesoundcart;
         public Boolean firstload;
+        public Song SplashSound;
+        public SoundEffect OverSound;
 
         public Gestionsons(Game1 g)
         {
@@ -62,6 +64,10 @@ namespace premieredemarque2
 
             Splash = jeu.Content.Load<SoundEffect>("smash_dirty");
             theme = jeu.Content.Load<Song>("theme");
+
+
+            SplashSound = jeu.Content.Load<Song>("music_intro");
+            OverSound = jeu.Content.Load<SoundEffect>("game_over");
         }
 
         public void Maj(Boolean marche, Boolean taper, Boolean tuer, Boolean toucher, int time)
@@ -152,6 +158,11 @@ namespace premieredemarque2
             } while (tmp == indicerand);
 
             Ltoucher[indicerand].Play();
+        }
+
+        public void stopTheme()
+        {
+            MediaPlayer.Stop();
         }
     }
 }

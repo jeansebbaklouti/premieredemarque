@@ -72,7 +72,7 @@ namespace premieredemarque2
 
             marche = false;
 
-            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 50));
+            stressGauje = new Gauje(jeu, "stress", new Vector2(1000, 25));
         }
 
         public void charger()

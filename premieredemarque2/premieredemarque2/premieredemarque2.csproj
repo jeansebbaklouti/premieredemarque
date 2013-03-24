@@ -119,6 +119,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Score.cs" />
+    <Compile Include="vetement\Coupon.cs" />
     <Compile Include="vetement\Vetement.cs" />
   </ItemGroup>
   <ItemGroup>

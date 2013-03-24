@@ -23,6 +23,7 @@ namespace premieredemarque2
         private List<Rectangle> _murs;
         private Texture2D _rect;
         private int TileSize = 50;
+        private Boolean first = true;
 
         int[,] map1 =
             {
@@ -32,8 +33,8 @@ namespace premieredemarque2
                 { 1,1,1,1,1,1,1,3,3,3,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
                 { 4,4,4,4,4,1,1,1,3,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,4,4,4, },
-                { 1,1,1,1,1,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,1,1,61, },
-                { 1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,1,4,4,4,1,1,5,1,1,1,1,1,1,61,1, },
+                { 1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,61,1, },
                 { 4,4,4,4,4,1,1,6,1,6,1,1,1,1,1,1,1,1,1,1,2,1,1,4,4,4, },
                 { 4,4,4,4,4,1,1,1,6,1,1,1,1,1,1,1,1,1,1,1,2,1,1,4,4,4, },
                 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1, },
@@ -51,8 +52,8 @@ namespace premieredemarque2
                 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,1,1,1,1,1,1,1, },
                 { 4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,1,4,4,1,1,1,1,1,1,1,1, },
                 { 4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,1,4,4,1,1,1,1,1,1,1,1, },
-                { 1,1,1,1,1,1,1,1,1,1,1,5,1,5,1,1,1,1,1,1,1,1,5,5,5,5, },
-                { 1,1,1,1,1,1,1,1,1,1,1,5,1,5,1,1,1,1,3,3,1,1,1,1,1,1, },
+                { 1,1,1,1,1,1,1,1,1,1,1,5,1,5,1,1,1,1,1,1,1,1,5,5,5,61, },
+                { 1,1,1,1,1,1,1,1,1,1,1,5,1,5,1,1,1,1,3,3,1,1,1,1,1,61, },
                 { 1,1,1,1,1,1,1,1,1,1,1,5,1,5,1,1,1,3,1,1,3,1,1,1,1,1, },
                 { 1,1,4,4,1,1,1,1,1,1,1,5,1,5,1,1,1,3,1,1,3,1,1,1,1,1, },
                 { 1,1,4,4,1,1,1,1,1,1,1,5,1,5,1,1,1,1,3,3,1,1,1,1,1,1, },
@@ -124,11 +125,11 @@ namespace premieredemarque2
         {
 
             this._levels = new List<Level>();
-            _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {1, 14}));
-            _levels.Add(new Level(map2, new int[] {0, 15}, new int[] {0, 15}));
-            _levels.Add(new Level(map3, new int[] {0, 15}, new int[] {0, 15}));
-            _levels.Add(new Level(map4, new int[] {0, 15}, new int[] {0, 15}));
-            _levels.Add(new Level(map5, new int[] {0, 15}, new int[] {0, 15}));
+            _levels.Add(new Level(map1, new int[] {1, 15}, new int[] {4, 15}));
+            _levels.Add(new Level(map2, new int[] {1, 15}, new int[] {4, 15}));
+            _levels.Add(new Level(map3, new int[] {1, 15}, new int[] {4, 15}));
+            _levels.Add(new Level(map4, new int[] {1, 15}, new int[] {4, 15}));
+            _levels.Add(new Level(map5, new int[] {1, 15}, new int[] {4, 15}));
 
             this.setLevel(level);
             this._murs = murs;
@@ -181,18 +182,48 @@ namespace premieredemarque2
             return _murs;
         }
 
-        public void afficher(SpriteBatch _sb, Texture2D myTexture)
+        public void afficher(SpriteBatch _sb, Texture2D myTexture, Boolean B)
         {
-            for (int y = 0; y < this.getLengthY(); y++)
+            if (B == false)
             {
-                for (int x = 0; x < this.getLengthX(); x++)
+                for (int y = 0; y < _data.GetLength(0); y++)
                 {
-                    _sb.Draw(myTexture,
-                            new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
-                            new Rectangle((_data[y, x] - 1) % 10 * TileSize, (int)(_data[y, x] - 1) / 10 * TileSize, 50, 50),
-                            Color.White);
+                    for (int x = 0; x < _data.GetLength(1); x++)
+                    {
+                        Rectangle dest = new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50);
 
+                        _sb.Draw(myTexture,
+                                dest,
+                                new Rectangle((_data[y, x] - 1) % 10 * TileSize, (_data[y, x] - 1) / 10 * TileSize, 50, 50),
+                                Color.White);
+
+                    }
                 }
+            }
+            else
+            {
+                for (int y = 0; y < _data.GetLength(0); y++)
+                {
+                    for (int x = 0; x < _data.GetLength(1); x++)
+                    {
+                        if (_data[y, x] == 61 && first)
+                        {
+                            _sb.Draw(myTexture,
+                                new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
+                                new Rectangle((_data[y, x]) % 10 * TileSize, (_data[y, x]) / 10 * TileSize, 50, 50),
+                                Color.White);
+                            first = false;
+                        }
+                        else
+                        {
+                            _sb.Draw(myTexture,
+                                    new Rectangle(-10 + (x * TileSize), y * TileSize, 50, 50),
+                                    new Rectangle((_data[y, x] - 1) % 10 * TileSize, (_data[y, x] - 1) / 10 * TileSize, 50, 50),
+                                    Color.White);
+                        }
+                    }
+                }
+                first = true;
             }
         }
 
